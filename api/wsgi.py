@@ -4,10 +4,13 @@ import os
 import sys
 from pathlib import Path
 
-# Add emmaus app directory to path
+# Vercel runs this from /vercel/path0/api/wsgi.py
+# Project root is one level up
 BASE_DIR = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(BASE_DIR))
-sys.path.insert(0, str(BASE_DIR / "emmaus"))
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+if str(BASE_DIR / "emmaus") not in sys.path:
+    sys.path.insert(0, str(BASE_DIR / "emmaus"))
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.vercel")
 

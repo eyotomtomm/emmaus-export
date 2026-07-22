@@ -6,7 +6,7 @@ from .base import env
 
 # GENERAL
 # ------------------------------------------------------------------------------
-DEBUG = False
+DEBUG = True
 SECRET_KEY = env(
     "DJANGO_SECRET_KEY",
     default="emmaus-vercel-secret-change-in-production",
@@ -35,7 +35,7 @@ CACHES = {
 STATIC_ROOT = str(BASE_DIR / "staticfiles")
 STORAGES = {
     "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+        "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
     },
 }
 
