@@ -1,0 +1,44 @@
+"""Settings for Vercel deployment."""
+
+from .base import *  # noqa: F403
+from .base import BASE_DIR
+from .base import env
+
+# GENERAL
+# ------------------------------------------------------------------------------
+DEBUG = False
+SECRET_KEY = env(
+    "DJANGO_SECRET_KEY",
+    default="emmaus-vercel-secret-change-in-production",
+)
+ALLOWED_HOSTS = ["*"]
+
+# DATABASES
+# ------------------------------------------------------------------------------
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": "/tmp/db.sqlite3",
+    }
+}
+
+# CACHES
+# ------------------------------------------------------------------------------
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+    },
+}
+
+# STATIC FILES
+# ------------------------------------------------------------------------------
+STATIC_ROOT = str(BASE_DIR / "staticfiles")
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
+
+# EMAIL
+# ------------------------------------------------------------------------------
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
