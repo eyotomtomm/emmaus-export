@@ -2,6 +2,7 @@
 
 from .base import *  # noqa: F403
 from .base import BASE_DIR
+from .base import MIDDLEWARE
 from .base import env
 
 # GENERAL
@@ -32,12 +33,18 @@ CACHES = {
 
 # STATIC FILES
 # ------------------------------------------------------------------------------
+# WhiteNoise serves from finders (emmaus/static/) without collectstatic
 STATIC_ROOT = str(BASE_DIR / "staticfiles")
+WHITENOISE_USE_FINDERS = True
+WHITENOISE_AUTOREFRESH = True
 STORAGES = {
     "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
     },
 }
+
+# Remove whitenoise from middleware - use Django's built-in static serving
+MIDDLEWARE = [m for m in MIDDLEWARE if "whitenoise" not in m.lower()]
 
 # EMAIL
 # ------------------------------------------------------------------------------
