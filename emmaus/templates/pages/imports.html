@@ -1,0 +1,248 @@
+{% extends 'landing.html' %}
+
+{% load static %}
+
+{% block title %}Emmaus Import Export PLC - Import Solutions{% endblock title %}
+
+{% block page_content %}
+
+<main>
+   <!-- breadcrumb area start -->
+   <section class="emmaus-breadcrumb p-relative z-index-1 fix" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=80'); background-size: cover; background-position: center;">
+      <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg, rgba(26,82,121,0.92) 0%, rgba(45,48,55,0.9) 100%);z-index:0;"></div>
+      <div class="container" style="position:relative;z-index:2;">
+         <div class="text-center">
+            <h2 class="ca-breadcrumb-title fnw-600" style="color:#fff;">Import Solutions</h2>
+            <p style="color:rgba(255,255,255,0.8);margin-top:10px;">High-quality products from trusted international manufacturers</p>
+            <div class="it-breadcum-link" style="margin-top:16px;">
+               <a href="{% url 'pages:dashboard' %}" style="color:rgba(255,255,255,0.8);">Home</a>
+               <span style="color:rgba(255,255,255,0.6);"><i class="fa-solid fa-angle-right"></i></span>
+               <a class="active" href="#" style="color:#fff;">Import Solutions</a>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- breadcrumb area end -->
+
+   <!-- intro section start -->
+   <section class="emmaus-section">
+      <div class="container">
+         <div class="row justify-content-center">
+            <div class="col-lg-10 text-center" data-aos="fade-up" data-aos-duration="800">
+               <span class="emmaus-section-subtitle">What We Import</span>
+               <h2 class="emmaus-section-title">Comprehensive Import Solutions</h2>
+               <p class="pt-16" style="font-size:17px;line-height:1.8;color:#5a5d63;">Emmaus Import Export PLC is committed to meeting Ethiopia's growing industrial and commercial needs by importing high-quality products from trusted international manufacturers. We supply reliable products that support businesses, industries, and consumers across the country.</p>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- intro section end -->
+
+   <!-- import categories section start -->
+   <section class="emmaus-section emmaus-section-gray">
+      <div class="container">
+         <div class="text-center mb-60" data-aos="fade-up" data-aos-duration="800">
+            <span class="emmaus-section-subtitle">Our Categories</span>
+            <h2 class="emmaus-section-title">Import Product Categories</h2>
+         </div>
+         <div class="row">
+            <!-- Vehicles -->
+            <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="800">
+               <div class="emmaus-import-card">
+                  <div class="import-icon">
+                     <span style="color:#1a5279;"><i class="fa-solid fa-truck"></i></span>
+                  </div>
+                  <h4>Vehicles</h4>
+                  <ul>
+                     <li>Passenger cars</li>
+                     <li>Commercial vehicles</li>
+                     <li>Pickup trucks</li>
+                     <li>SUVs</li>
+                     <li>Heavy-duty trucks</li>
+                     <li>Specialized vehicles</li>
+                  </ul>
+               </div>
+            </div>
+            <!-- Chemicals -->
+            <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+               <div class="emmaus-import-card">
+                  <div class="import-icon">
+                     <span style="color:#1a5279;"><i class="fa-solid fa-flask"></i></span>
+                  </div>
+                  <h4>Chemicals</h4>
+                  <ul>
+                     <li>Industrial chemicals</li>
+                     <li>Agricultural chemicals</li>
+                     <li>Food-grade chemicals</li>
+                     <li>Water treatment chemicals</li>
+                     <li>Laboratory chemicals</li>
+                     <li>Manufacturing raw materials</li>
+                  </ul>
+               </div>
+            </div>
+            <!-- Machinery -->
+            <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+               <div class="emmaus-import-card">
+                  <div class="import-icon">
+                     <span style="color:#1a5279;"><i class="fa-solid fa-gears"></i></span>
+                  </div>
+                  <h4>Machinery</h4>
+                  <ul>
+                     <li>Agricultural machinery</li>
+                     <li>Construction equipment</li>
+                     <li>Industrial machinery</li>
+                     <li>Manufacturing equipment</li>
+                     <li>Processing machinery</li>
+                     <li>Spare parts and accessories</li>
+                  </ul>
+               </div>
+            </div>
+            <!-- Electronics -->
+            <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+               <div class="emmaus-import-card">
+                  <div class="import-icon">
+                     <span style="color:#1a5279;"><i class="fa-solid fa-laptop"></i></span>
+                  </div>
+                  <h4>Electronics</h4>
+                  <ul>
+                     <li>Consumer electronics</li>
+                     <li>Office equipment</li>
+                     <li>Computer hardware</li>
+                     <li>Communication devices</li>
+                     <li>Electrical equipment</li>
+                     <li>Industrial electronic systems</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- import categories section end -->
+
+   <!-- note section start -->
+   <section class="emmaus-section">
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-lg-6 mb-30" data-aos="fade-right" data-aos-duration="1000">
+               <div class="p-relative">
+                  <img class="w-100" src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80" alt="Warehousing and logistics" style="border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.12);">
+               </div>
+            </div>
+            <div class="col-lg-6 mb-30" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+               <div class="ca-about-content-3 ca-sec-content-3">
+                  <span class="emmaus-section-subtitle">Additional Services</span>
+                  <h2 class="emmaus-section-title">Customized Sourcing</h2>
+                  <p class="pt-16 pb-32" style="font-size:16px;line-height:1.8;color:#5a5d63;">Emmaus Import Export PLC also imports a variety of other products based on customer requirements, offering customized sourcing solutions from reputable global suppliers.</p>
+                  <a href="{% url 'pages:dynamic_pages' template_name='contact' %}" class="ca-btn-primary-3 theme-bg-3 text-white br-50">Discuss Your Needs <span><i class="fa-solid fa-angle-right"></i></span></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- note section end -->
+
+   <!-- why choose us section start -->
+   <section class="emmaus-section emmaus-section-gray">
+      <div class="container">
+         <div class="text-center mb-60" data-aos="fade-up" data-aos-duration="800">
+            <span class="emmaus-section-subtitle">Our Advantages</span>
+            <h2 class="emmaus-section-title">Why Choose Emmaus</h2>
+         </div>
+         <div class="row">
+            <!-- Trusted international supplier network -->
+            <div class="col-lg-4 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
+               <div class="emmaus-value-card">
+                  <div class="value-icon">
+                     <i class="fa-solid fa-globe"></i>
+                  </div>
+                  <h4>Trusted International Supplier Network</h4>
+                  <p>Established relationships with reputable manufacturers and suppliers worldwide.</p>
+               </div>
+            </div>
+            <!-- Genuine, high-quality products -->
+            <div class="col-lg-4 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+               <div class="emmaus-value-card">
+                  <div class="value-icon">
+                     <i class="fa-solid fa-certificate"></i>
+                  </div>
+                  <h4>Genuine, High-Quality Products</h4>
+                  <p>Only authentic, certified products sourced directly from trusted manufacturers.</p>
+               </div>
+            </div>
+            <!-- Competitive pricing -->
+            <div class="col-lg-4 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+               <div class="emmaus-value-card">
+                  <div class="value-icon">
+                     <i class="fa-solid fa-tags"></i>
+                  </div>
+                  <h4>Competitive Pricing</h4>
+                  <p>Best value through direct sourcing and efficient supply chain management.</p>
+               </div>
+            </div>
+            <!-- Reliable logistics and timely delivery -->
+            <div class="col-lg-4 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+               <div class="emmaus-value-card">
+                  <div class="value-icon">
+                     <i class="fa-solid fa-truck-fast"></i>
+                  </div>
+                  <h4>Reliable Logistics &amp; Timely Delivery</h4>
+                  <p>Efficient shipping and logistics ensuring your products arrive on schedule.</p>
+               </div>
+            </div>
+            <!-- Professional customer service -->
+            <div class="col-lg-4 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+               <div class="emmaus-value-card">
+                  <div class="value-icon">
+                     <i class="fa-solid fa-headset"></i>
+                  </div>
+                  <h4>Professional Customer Service</h4>
+                  <p>Dedicated support team to assist you throughout the entire import process.</p>
+               </div>
+            </div>
+            <!-- Compliance with Ethiopian import regulations -->
+            <div class="col-lg-4 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+               <div class="emmaus-value-card">
+                  <div class="value-icon">
+                     <i class="fa-solid fa-file-shield"></i>
+                  </div>
+                  <h4>Compliance with Ethiopian Import Regulations</h4>
+                  <p>Full adherence to all regulatory requirements for seamless customs clearance.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- why choose us section end -->
+
+   <!-- closing statement section start -->
+   <section class="emmaus-section">
+      <div class="container">
+         <div class="row justify-content-center">
+            <div class="col-lg-10 text-center" data-aos="fade-up" data-aos-duration="800">
+               <h2 class="emmaus-section-title">Our Commitment</h2>
+               <p class="pt-16" style="font-size:17px;line-height:1.8;color:#5a5d63;">Emmaus Import Export PLC is dedicated to connecting Ethiopian businesses with world-class products while ensuring quality, reliability, and long-term partnerships. Our goal is to provide efficient import solutions that contribute to the growth of our customers and the nation's economy.</p>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- closing statement section end -->
+
+   <!-- cta section start -->
+   <section class="emmaus-section" style="background:linear-gradient(135deg, #1a5279 0%, #2d3037 100%);padding:80px 0;">
+      <div class="container">
+         <div class="row align-items-center" data-aos="fade-up" data-aos-duration="1000">
+            <div class="col-lg-8 mb-30">
+               <h2 class="ca-section-title text-white fnw-700" style="margin-bottom:12px;">Need Import Solutions?</h2>
+               <p style="color:rgba(255,255,255,0.85);font-size:17px;">Contact us today to discuss your import requirements. Our experienced team is ready to source the products you need from trusted global suppliers.</p>
+            </div>
+            <div class="col-lg-4 mb-30 text-lg-end">
+               <a href="{% url 'pages:dynamic_pages' template_name='contact' %}" class="ca-btn-primary-3 w-bg br-50">Contact Us <span><i class="fa-solid fa-angle-right"></i></span></a>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- cta section end -->
+
+</main>
+
+{% endblock page_content %}

@@ -1,0 +1,46 @@
+{% load static %}
+
+<header class="header-area-3 stiky">
+    <div class="container header-3">
+        <div class="row align-items-center">
+            <div class="col-xl-3 col-lg col-md-6 col-6">
+                <!-- emmaus logo -->
+                <div class="ca-logo">
+                    <a href="{% url 'pages:dashboard' %}"><img
+                            src="{% static 'images/logo/emmaus-logo.png' %}" alt="Emmaus Import Export PLC" style="max-height: 50px;"></a>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-7 d-none d-lg-block">
+                <!-- main menu -->
+                <div class="ca-main-menu-3">
+                    <nav class="ca-mobile-menu-active-3">
+                        <ul>
+                            <li><a href="{% url 'pages:dashboard' %}">Home</a></li>
+                            <li><a href="{% url 'pages:dynamic_pages' template_name='about' %}">About Us</a></li>
+                            <li><a href="{% url 'pages:dynamic_pages' template_name='products' %}">Export Products</a></li>
+                            <li><a href="{% url 'pages:dynamic_pages' template_name='imports' %}">Import Solutions</a></li>
+                            <li><a href="{% url 'pages:dynamic_pages' template_name='contact' %}">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg col-md-6 col-6">
+                <!-- cta button -->
+                <div class="ca-btn-header d-none d-lg-block text-end">
+                    <a href="{% url 'pages:dynamic_pages' template_name='contact' %}"
+                        class="ca-btn-primary-3 theme-bg-3 text-white br-50">Request Quote <span><i
+                                class="fa-solid fa-angle-right"></i></span></a>
+                </div>
+                <div class="ca-header-action-item d-lg-none text-end">
+                    <button type="button" class="ca-offcanvas-toogle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" viewBox="0 0 30 16">
+                            <rect x="10" width="20" height="2" fill="currentColor"></rect>
+                            <rect x="5" y="7" width="25" height="2" fill="currentColor"></rect>
+                            <rect x="10" y="14" width="20" height="2" fill="currentColor"></rect>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

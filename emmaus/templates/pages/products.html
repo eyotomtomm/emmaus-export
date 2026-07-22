@@ -1,0 +1,308 @@
+{% extends 'landing.html' %}
+
+{% load static %}
+
+{% block title %}Emmaus Import Export PLC - Export Products{% endblock title %}
+
+{% block page_content %}
+
+<main>
+   <!-- breadcrumb area start -->
+   <section class="emmaus-breadcrumb p-relative z-index-1 fix" style="background-image: url('https://images.unsplash.com/photo-1595231776515-ddffb1f4eb73?w=1920&q=80'); background-size: cover; background-position: center;">
+      <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg, rgba(26,82,121,0.92) 0%, rgba(45,48,55,0.9) 100%);z-index:0;"></div>
+      <div class="container" style="position:relative;z-index:2;">
+         <div class="text-center">
+            <h2 class="ca-breadcrumb-title fnw-600" style="color:#fff;">Our Export Products</h2>
+            <p style="color:rgba(255,255,255,0.8);margin-top:10px;">Premium Ethiopian agricultural products for the global market</p>
+            <div class="it-breadcum-link" style="margin-top:16px;">
+               <a href="{% url 'pages:dashboard' %}" style="color:rgba(255,255,255,0.8);">Home</a>
+               <span style="color:rgba(255,255,255,0.6);"><i class="fa-solid fa-angle-right"></i></span>
+               <a class="active" href="#" style="color:#fff;">Export Products</a>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- breadcrumb area end -->
+
+   <!-- ============================================================ -->
+   <!-- OILSEEDS SECTION -->
+   <!-- ============================================================ -->
+   <section class="emmaus-section emmaus-section-gray" id="oilseeds">
+      <div class="container">
+         <div class="text-center mb-60" data-aos="fade-up" data-aos-duration="800">
+            <span class="emmaus-section-subtitle">Category 01</span>
+            <h2 class="emmaus-section-title">Oilseeds</h2>
+            <p class="pt-16">Ethiopia is one of the world's leading producers of premium oilseeds. We export high-quality Sesame Seeds, Black Cumin (Nigella Sativa), Niger Seeds, and Linseed sourced from Ethiopia's most fertile growing regions.</p>
+         </div>
+         <div class="row justify-content-center">
+            <!-- Humera Sesame Seed -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800">
+               <div class="emmaus-product-card">
+                  <div class="product-img">
+                     <img src="{% static 'images/products/humera-sesame-seed.png' %}" alt="Humera Sesame Seed">
+                  </div>
+                  <div class="product-content">
+                     <h4>Humera Sesame Seed</h4>
+                     <p>Premium whitish sesame seeds from Ethiopia's renowned Humera region, prized for their high oil content and purity.</p>
+                  </div>
+                  <ul class="product-specs list-unstyled">
+                     <li><strong>Color:</strong> Whitish</li>
+                     <li><strong>Purity:</strong> 99%</li>
+                     <li><strong>Admixture:</strong> Max 1%</li>
+                     <li><strong>Oil Content:</strong> Min. 50%</li>
+                     <li><strong>Container Stuffing:</strong> 19MT per 20FCL</li>
+                  </ul>
+               </div>
+            </div>
+            <!-- Black Cumin -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+               <div class="emmaus-product-card">
+                  <div class="product-img">
+                     <img src="{% static 'images/products/black-cumin.png' %}" alt="Black Cumin (Nigella Sativa)">
+                  </div>
+                  <div class="product-content">
+                     <h4>Black Cumin (Nigella Sativa)</h4>
+                     <p>High-quality Ethiopian black cumin seeds with uniform color and exceptional purity, widely valued for culinary and medicinal use.</p>
+                  </div>
+                  <ul class="product-specs list-unstyled">
+                     <li><strong>Color:</strong> Uniform Black</li>
+                     <li><strong>Purity:</strong> Min 98.5%</li>
+                     <li><strong>Admixture:</strong> Max 1%</li>
+                     <li><strong>Moisture:</strong> Max 8%</li>
+                     <li><strong>Container Stuffing:</strong> 15 MTs x 20FCL or 28/30 MTs x 40FCL</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- ============================================================ -->
+   <!-- SPICES SECTION -->
+   <!-- ============================================================ -->
+   <section class="emmaus-section" id="spices">
+      <div class="container">
+         <div class="text-center mb-60" data-aos="fade-up" data-aos-duration="800">
+            <span class="emmaus-section-subtitle">Category 02</span>
+            <h2 class="emmaus-section-title">Spices</h2>
+            <p class="pt-16">Ethiopia is the birthplace of many prized spices. We export Turmeric, Coriander, Ginger, Cumin, Fenugreek, Cardamom, Long Pepper, and Chili Pepper -- delivering authentic Ethiopian flavors to markets worldwide.</p>
+         </div>
+         <div class="row justify-content-center">
+            <!-- Turmeric Finger -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800">
+               <div class="emmaus-product-card">
+                  <div class="product-img">
+                     <img src="{% static 'images/products/turmeric-finger.png' %}" alt="Turmeric Finger">
+                  </div>
+                  <div class="product-content">
+                     <h4>Turmeric Finger</h4>
+                     <p>Whole turmeric finger and bulb mix from Ethiopia, known for its vibrant yellow color and high curcumin content.</p>
+                  </div>
+                  <ul class="product-specs list-unstyled">
+                     <li><strong>Type:</strong> Whole Turmeric Finger / Bulb Mixed</li>
+                     <li><strong>Color:</strong> Yellow</li>
+                     <li><strong>Purity:</strong> Turmeric Finger Min 67%, Bulb 33%</li>
+                     <li><strong>Foreign Material:</strong> Max 1%</li>
+                     <li><strong>Container Stuffing:</strong> 28MT per 40FCL</li>
+                  </ul>
+               </div>
+            </div>
+            <!-- Coriander Seed -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+               <div class="emmaus-product-card">
+                  <div class="product-img">
+                     <img src="{% static 'images/products/coriander-seed.png' %}" alt="Coriander Seed">
+                  </div>
+                  <div class="product-content">
+                     <h4>Coriander Seed</h4>
+                     <p>Uniform yellow-brown Ethiopian coriander seeds with excellent purity, ideal for spice blends and food processing.</p>
+                  </div>
+                  <ul class="product-specs list-unstyled">
+                     <li><strong>Color:</strong> Uniform Yellow-Brown</li>
+                     <li><strong>Purity:</strong> Min 98%</li>
+                     <li><strong>Admixture:</strong> 2% Max</li>
+                     <li><strong>Packing:</strong> 25KGS / 40KGS</li>
+                     <li><strong>Container Stuffing:</strong> 20 MTs x 40FCL</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- ============================================================ -->
+   <!-- PULSES SECTION -->
+   <!-- ============================================================ -->
+   <section class="emmaus-section emmaus-section-gray" id="pulses">
+      <div class="container">
+         <div class="text-center mb-60" data-aos="fade-up" data-aos-duration="800">
+            <span class="emmaus-section-subtitle">Category 03</span>
+            <h2 class="emmaus-section-title">Pulses</h2>
+            <p class="pt-16">Ethiopia produces a wide variety of high-quality pulses. Our range includes chickpeas, kidney beans, mung beans, soya beans, and more -- all carefully sourced and processed to meet international standards.</p>
+         </div>
+         <div class="row">
+            <!-- White Round Pea Bean -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800">
+               <div class="emmaus-product-card">
+                  <div class="product-img">
+                     <img src="{% static 'images/products/white-round-pea-bean.png' %}" alt="White Round Pea Bean">
+                  </div>
+                  <div class="product-content">
+                     <h4>White Round Pea Bean</h4>
+                  </div>
+                  <ul class="product-specs list-unstyled">
+                     <li><strong>Purity:</strong> Min 98%</li>
+                     <li><strong>Count:</strong> 670-720 Beans/100g</li>
+                     <li><strong>Stuffing:</strong> 24MT per 20FCL</li>
+                  </ul>
+               </div>
+            </div>
+            <!-- Red Speckled Kidney Bean -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+               <div class="emmaus-product-card">
+                  <div class="product-img">
+                     <img src="{% static 'images/products/red-speckled-kidney-bean.png' %}" alt="Red Kidney Bean">
+                  </div>
+                  <div class="product-content">
+                     <h4>Red Kidney Bean</h4>
+                  </div>
+                  <ul class="product-specs list-unstyled">
+                     <li><strong>Purity:</strong> 98% Min</li>
+                     <li><strong>Moisture:</strong> 13% Max</li>
+                     <li><strong>Count:</strong> 450-500 Beans/100g</li>
+                  </ul>
+               </div>
+            </div>
+            <!-- Kabuli Chickpea -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+               <div class="emmaus-product-card">
+                  <div class="product-img">
+                     <img src="{% static 'images/products/kabuli-chickpea.jpg' %}" alt="Kabuli Chickpea">
+                  </div>
+                  <div class="product-content">
+                     <h4>Kabuli Chickpea</h4>
+                  </div>
+                  <ul class="product-specs list-unstyled">
+                     <li><strong>Purity:</strong> Min 98%</li>
+                     <li><strong>Size:</strong> 25% (6mm), 50% (7mm), 25% (8mm)</li>
+                  </ul>
+               </div>
+            </div>
+            <!-- Desi Chickpeas -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+               <div class="emmaus-product-card">
+                  <div class="product-img">
+                     <img src="{% static 'images/products/desi-chickpeas.png' %}" alt="Desi Chickpeas">
+                  </div>
+                  <div class="product-content">
+                     <h4>Desi Chickpeas</h4>
+                  </div>
+                  <ul class="product-specs list-unstyled">
+                     <li><strong>Purity:</strong> Min 97%</li>
+                     <li><strong>Size:</strong> 3.5-5.5mm</li>
+                  </ul>
+               </div>
+            </div>
+            <!-- Green Mung Bean -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+               <div class="emmaus-product-card">
+                  <div class="product-img">
+                     <img src="{% static 'images/products/green-mung-bean.jpg' %}" alt="Green Mung Bean">
+                  </div>
+                  <div class="product-content">
+                     <h4>Green Mung Bean</h4>
+                  </div>
+                  <ul class="product-specs list-unstyled">
+                     <li><strong>Purity:</strong> Min 98%</li>
+                     <li><strong>Size:</strong> 2.9-3.5mm</li>
+                     <li><strong>Stuffing:</strong> 24 MTs per 20FCL</li>
+                  </ul>
+               </div>
+            </div>
+            <!-- Red Speckled Kidney Bean -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+               <div class="emmaus-product-card">
+                  <div class="product-img">
+                     <img src="{% static 'images/products/red-speckled-kidney-bean.png' %}" alt="Red Speckled Kidney Bean">
+                  </div>
+                  <div class="product-content">
+                     <h4>Red Speckled Kidney Bean</h4>
+                  </div>
+                  <ul class="product-specs list-unstyled">
+                     <li><strong>Purity:</strong> Min 96%</li>
+                     <li><strong>Count:</strong> 220-260 Beans/100g</li>
+                  </ul>
+               </div>
+            </div>
+            <!-- Soya Bean -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+               <div class="emmaus-product-card">
+                  <div class="product-img">
+                     <img src="{% static 'images/products/soya-bean.png' %}" alt="Soya Bean">
+                  </div>
+                  <div class="product-content">
+                     <h4>Soya Bean</h4>
+                  </div>
+                  <ul class="product-specs list-unstyled">
+                     <li><strong>Purity:</strong> Min 96%</li>
+                     <li><strong>Protein:</strong> Min 35%</li>
+                     <li><strong>Oil:</strong> Min 18%</li>
+                  </ul>
+               </div>
+            </div>
+            <!-- Pinto Beans -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+               <div class="emmaus-product-card">
+                  <div class="product-img">
+                     <img src="{% static 'images/products/pinto-beans.png' %}" alt="Pinto Beans">
+                  </div>
+                  <div class="product-content">
+                     <h4>Pinto Beans</h4>
+                  </div>
+                  <ul class="product-specs list-unstyled">
+                     <li><strong>Purity:</strong> Min 96%</li>
+                     <li><strong>Count:</strong> 285-310 Beans/100g</li>
+                  </ul>
+               </div>
+            </div>
+            <!-- Lupin -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
+               <div class="emmaus-product-card">
+                  <div class="product-img">
+                     <img src="{% static 'images/products/lupin.png' %}" alt="Lupin">
+                  </div>
+                  <div class="product-content">
+                     <h4>Lupin</h4>
+                  </div>
+                  <ul class="product-specs list-unstyled">
+                     <li><strong>Purity:</strong> Min 98%</li>
+                     <li><strong>Moisture:</strong> Max 13%</li>
+                     <li><strong>Count:</strong> 330-350 Beans/100g</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- ============================================================ -->
+   <!-- CTA SECTION -->
+   <!-- ============================================================ -->
+   <section class="emmaus-section" style="background:linear-gradient(135deg, #1a5279 0%, #2d3037 100%);padding:80px 0;">
+      <div class="container">
+         <div class="row align-items-center" data-aos="fade-up" data-aos-duration="1000">
+            <div class="col-lg-8 mb-30">
+               <h2 class="ca-section-title text-white fnw-700" style="margin-bottom:12px;">Interested in Our Products?</h2>
+               <p style="color:rgba(255,255,255,0.85);font-size:17px;">Contact us today to request a quote, product specifications, or samples. Our team is ready to assist you with your sourcing needs.</p>
+            </div>
+            <div class="col-lg-4 mb-30 text-lg-end">
+               <a href="{% url 'pages:dynamic_pages' template_name='contact' %}" class="ca-btn-primary-3 w-bg br-50">Request a Quote <span><i class="fa-solid fa-angle-right"></i></span></a>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- cta section end -->
+
+</main>
+
+{% endblock page_content %}

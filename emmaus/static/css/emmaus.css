@@ -1,0 +1,335 @@
+/* Emmaus Import Export PLC - Custom Theme Colors
+   Primary: #1a5279 (Deep Blue from logo)
+   Secondary: #2d3037 (Dark Charcoal from logo)
+   Accent: #1e6b3a (Green for agriculture)
+*/
+
+/* Override theme color 3 (primary accent) */
+.theme-color-3 {
+    color: #1a5279;
+}
+.theme-bg-3 {
+    background: #1a5279;
+}
+
+/* Override dark backgrounds */
+.theme-black-bg-3 {
+    background: #2d3037;
+}
+.theme-black-3 {
+    color: #2d3037;
+}
+
+/* Subtitle backgrounds */
+.subtitle-bg-6 {
+    background: #e8f0f7;
+}
+.subtitle-bg-7 {
+    background: #1f2630;
+}
+
+/* Buttons */
+.ca-btn-primary-3.theme-bg-3 {
+    background: #1a5279;
+}
+.ca-btn-primary-3.theme-bg-3:hover {
+    background: #144263;
+}
+
+/* Header sticky */
+.header-area-3.stiky.active {
+    background: #ffffff;
+    box-shadow: 0 2px 20px rgba(26, 82, 121, 0.1);
+}
+
+/* Footer override */
+footer.theme-bg-3 {
+    background: #2d3037;
+}
+
+/* Hero section */
+.emmaus-hero {
+    background: linear-gradient(135deg, #1a5279 0%, #2d3037 100%);
+    padding: 140px 0 100px;
+    position: relative;
+    overflow: hidden;
+}
+.emmaus-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1920&q=80') center/cover no-repeat;
+    opacity: 0.15;
+}
+.emmaus-hero .container {
+    position: relative;
+    z-index: 2;
+}
+.emmaus-hero h1 {
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.emmaus-hero p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 600px;
+}
+.emmaus-hero .hero-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+}
+
+/* Product cards */
+.emmaus-product-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+}
+.emmaus-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(26, 82, 121, 0.15);
+}
+.emmaus-product-card .product-img {
+    height: 220px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    padding: 20px;
+}
+.emmaus-product-card .product-img img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+.emmaus-product-card .product-content {
+    padding: 24px;
+}
+.emmaus-product-card .product-content h4 {
+    color: #2d3037;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+.emmaus-product-card .product-content p {
+    color: #5a5d63;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.emmaus-product-card .product-specs {
+    padding: 0 24px 24px;
+}
+.emmaus-product-card .product-specs li {
+    color: #5a5d63;
+    font-size: 13px;
+    padding: 4px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+.emmaus-product-card .product-specs li:last-child {
+    border-bottom: none;
+}
+
+/* Section styling */
+.emmaus-section {
+    padding: 100px 0;
+}
+.emmaus-section-gray {
+    background: #f8f9fa;
+}
+.emmaus-section-title {
+    color: #2d3037;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.emmaus-section-subtitle {
+    display: inline-block;
+    background: #e8f0f7;
+    color: #1a5279;
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+/* Value cards */
+.emmaus-value-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+    border-top: 3px solid #1a5279;
+}
+.emmaus-value-card:hover {
+    transform: translateY(-3px);
+}
+.emmaus-value-card .value-icon {
+    width: 60px;
+    height: 60px;
+    background: #e8f0f7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    color: #1a5279;
+    font-size: 24px;
+}
+.emmaus-value-card h4 {
+    color: #2d3037;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.emmaus-value-card p {
+    color: #5a5d63;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Import category cards */
+.emmaus-import-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 40px 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    margin-bottom: 30px;
+    border-left: 4px solid #1a5279;
+    transition: transform 0.3s ease;
+}
+.emmaus-import-card:hover {
+    transform: translateY(-3px);
+}
+.emmaus-import-card .import-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.emmaus-import-card h4 {
+    color: #2d3037;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+.emmaus-import-card ul {
+    list-style: none;
+    padding: 0;
+}
+.emmaus-import-card ul li {
+    color: #5a5d63;
+    padding: 6px 0;
+    padding-left: 20px;
+    position: relative;
+}
+.emmaus-import-card ul li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #1a5279;
+    font-size: 12px;
+}
+
+/* Contact info */
+.emmaus-contact-info {
+    background: #1a5279;
+    border-radius: 12px;
+    padding: 40px;
+    color: #ffffff;
+}
+.emmaus-contact-info h4 {
+    color: #ffffff;
+    margin-bottom: 24px;
+}
+.emmaus-contact-info p,
+.emmaus-contact-info a {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Markets section */
+.emmaus-market-badge {
+    display: inline-block;
+    background: #e8f0f7;
+    color: #1a5279;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 6px;
+    transition: all 0.3s ease;
+}
+.emmaus-market-badge:hover {
+    background: #1a5279;
+    color: #ffffff;
+}
+
+/* Breadcrumb */
+.emmaus-breadcrumb {
+    background: linear-gradient(135deg, #1a5279 0%, #2d3037 100%);
+    padding: 80px 0 50px;
+    text-align: center;
+}
+.emmaus-breadcrumb h2 {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 700;
+}
+.emmaus-breadcrumb p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Stats counter */
+.emmaus-stats {
+    background: #2d3037;
+    padding: 60px 0;
+}
+.emmaus-stat-item {
+    text-align: center;
+    padding: 20px;
+}
+.emmaus-stat-item h3 {
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: 700;
+}
+.emmaus-stat-item p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .emmaus-hero h1 {
+        font-size: 32px;
+    }
+    .emmaus-hero {
+        padding: 100px 0 80px;
+    }
+    .emmaus-section-title {
+        font-size: 28px;
+    }
+}

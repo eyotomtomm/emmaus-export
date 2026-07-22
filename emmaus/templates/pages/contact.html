@@ -1,0 +1,170 @@
+{% extends 'landing.html' %}
+
+{% load static %}
+
+{% block title %}Contact Us - Emmaus Import Export PLC{% endblock title %}
+
+{% block page_content %}
+
+<main>
+   <!-- breadcrumb -->
+   <section class="emmaus-breadcrumb" style="background:linear-gradient(135deg,rgba(26,82,121,0.92),rgba(45,48,55,0.9)),url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1920&q=80') center/cover no-repeat;">
+      <div class="container">
+         <h2>Contact Us</h2>
+         <p class="pt-16">Get in touch with Emmaus Import Export PLC</p>
+         <nav class="pt-16">
+            <a href="{% url 'pages:dashboard' %}" style="color:rgba(255,255,255,0.7);">Home</a>
+            <span style="color:rgba(255,255,255,0.5);margin:0 10px;">/</span>
+            <span style="color:#ffffff;">Contact</span>
+         </nav>
+      </div>
+   </section>
+
+   <!-- contact info cards -->
+   <section class="emmaus-section" style="padding-bottom:40px;">
+      <div class="container">
+         <div class="row">
+            <div class="col-xl-3 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="800">
+               <div class="emmaus-value-card" style="border-top-color:#1a5279;">
+                  <div class="value-icon"><i class="fa-solid fa-location-dot"></i></div>
+                  <h4>Our Address</h4>
+                  <p>Lemi Kura Sub-city, Woreda 08, RIM SEVEN Bldg., House No. 801, Addis Ababa, Ethiopia</p>
+               </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="1000">
+               <div class="emmaus-value-card" style="border-top-color:#1a5279;">
+                  <div class="value-icon"><i class="fa-solid fa-phone"></i></div>
+                  <h4>Call Us</h4>
+                  <p><a href="tel:+251911192862" style="color:#5a5d63;">+251 91 1192862</a></p>
+               </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="1200">
+               <div class="emmaus-value-card" style="border-top-color:#1a5279;">
+                  <div class="value-icon"><i class="fa-solid fa-envelope"></i></div>
+                  <h4>Email Us</h4>
+                  <p><a href="mailto:info@emmausimportexport.com" style="color:#5a5d63;font-size:13px;">info@emmausimportexport.com</a></p>
+                  <p><a href="mailto:Abel.Isayas@iqfortune.com" style="color:#5a5d63;font-size:13px;">Abel.Isayas@iqfortune.com</a></p>
+               </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="1400">
+               <div class="emmaus-value-card" style="border-top-color:#1a5279;">
+                  <div class="value-icon"><i class="fa-solid fa-clock"></i></div>
+                  <h4>Business Hours</h4>
+                  <p>Monday - Friday<br>8:30 AM - 5:30 PM (EAT)</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- map -->
+   <div class="ca-maps">
+      <iframe
+         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126766.37991425727!2d38.6530169!3d8.9806034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85cef5ab402d%3A0x8467b6b037a24d49!2sAddis%20Ababa%2C%20Ethiopia!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+         class="contact-page__google-map" allowfullscreen="" style="width:100%;height:400px;border:0;"></iframe>
+   </div>
+
+   <!-- contact form -->
+   <section class="emmaus-section">
+      <div class="container">
+         <div class="row align-items-start">
+            <div class="col-xl-7 mb-30">
+               <div class="ca-contact-from w-bg ca-contact-from-3" data-aos="fade-right" data-aos-duration="1000">
+                  <div class="ca-contact-content-3">
+                     <span class="emmaus-section-subtitle">Request a Quote</span>
+                     <h3 class="emmaus-section-title" style="font-size:28px;">Send Us a Message</h3>
+                     <p class="pt-16 pb-24">Looking for a reliable supplier of Ethiopian agricultural products? Contact Emmaus Import Export PLC today for product specifications, pricing, packaging options, and shipment details. Our team is ready to help you source premium Ethiopian products with confidence.</p>
+                  </div>
+                  <form action="#">
+                     <div class="row">
+                        <div class="col-md-6 mb-20">
+                           <input type="text" placeholder="Full Name">
+                        </div>
+                        <div class="col-md-6 mb-20">
+                           <input type="text" placeholder="Company Name">
+                        </div>
+                        <div class="col-md-6 mb-20">
+                           <input type="tel" placeholder="Phone Number">
+                        </div>
+                        <div class="col-md-6 mb-20">
+                           <input type="email" placeholder="Email Address">
+                        </div>
+                        <div class="col-md-12 mb-20">
+                           <select class="nice-select wide ca-select">
+                              <option data-display="Product Interest">Select Product Category</option>
+                              <option value="1">Oilseeds (Sesame, Black Cumin, Niger Seeds, Linseed)</option>
+                              <option value="2">Spices (Turmeric, Ginger, Coriander, Cumin, etc.)</option>
+                              <option value="3">Pulses (Chickpeas, Beans, Mung Beans, etc.)</option>
+                              <option value="4">Import - Vehicles</option>
+                              <option value="5">Import - Chemicals</option>
+                              <option value="6">Import - Machinery</option>
+                              <option value="7">Import - Electronics</option>
+                              <option value="8">Other</option>
+                           </select>
+                        </div>
+                        <div class="col-md-12 mb-20">
+                           <textarea name="message" id="message" placeholder="Tell us about your requirements, quantities, preferred packaging, and delivery timeline..."></textarea>
+                        </div>
+                        <div class="submit-btn">
+                           <button class="ca-btn-primary-3 theme-bg-3 text-white br-50" type="submit" value="submit">
+                              Send Message <span><i class="fa-solid fa-angle-right"></i></span></button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+            <div class="col-xl-5 mb-30">
+               <div class="emmaus-contact-info" data-aos="fade-left" data-aos-duration="1200">
+                  <h4 class="fnw-600" style="font-size:22px;">Emmaus Import Export PLC</h4>
+                  <p class="pt-16 pb-24">We are dedicated to supplying premium agricultural products to international markets while connecting global buyers with Ethiopia's rich agricultural heritage.</p>
+                  <div class="d-flex mb-20">
+                     <div style="min-width:40px;"><i class="fa-solid fa-location-dot" style="font-size:18px;"></i></div>
+                     <div>
+                        <p>Sub-city Lemi Kura, Woreda 08<br>RIM SEVEN Bldg. (In front of Civil Service College)<br>House Number 801, Addis Ababa, Ethiopia</p>
+                     </div>
+                  </div>
+                  <div class="d-flex mb-20">
+                     <div style="min-width:40px;"><i class="fa-solid fa-phone" style="font-size:18px;"></i></div>
+                     <div>
+                        <a href="tel:+251911192862" style="color:rgba(255,255,255,0.9);">+251 91 1192862</a>
+                     </div>
+                  </div>
+                  <div class="d-flex mb-20">
+                     <div style="min-width:40px;"><i class="fa-solid fa-envelope" style="font-size:18px;"></i></div>
+                     <div>
+                        <a href="mailto:info@emmausimportexport.com" style="color:rgba(255,255,255,0.9);">info@emmausimportexport.com</a><br>
+                        <a href="mailto:Abel.Isayas@iqfortune.com" style="color:rgba(255,255,255,0.9);">Abel.Isayas@iqfortune.com</a>
+                     </div>
+                  </div>
+                  <div class="d-flex mb-20">
+                     <div style="min-width:40px;"><i class="fa-solid fa-clock" style="font-size:18px;"></i></div>
+                     <div>
+                        <p><strong>Business Hours:</strong><br>Monday - Friday<br>8:30 AM - 5:30 PM (EAT)</p>
+                     </div>
+                  </div>
+                  <hr style="border-color:rgba(255,255,255,0.2);margin:20px 0;">
+                  <p style="font-size:14px;opacity:0.8;">Quality &bull; Integrity &bull; Reliability</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- markets -->
+   <section class="emmaus-section emmaus-section-gray" style="padding-top:60px;">
+      <div class="container text-center">
+         <span class="emmaus-section-subtitle">Global Reach</span>
+         <h2 class="emmaus-section-title">We Welcome Inquiries Worldwide</h2>
+         <p class="pt-16 pb-30">Importers, wholesalers, distributors, food manufacturers, and retailers across the globe.</p>
+         <div>
+            <span class="emmaus-market-badge"><i class="fa-solid fa-earth-europe" style="margin-right:6px;"></i> Europe</span>
+            <span class="emmaus-market-badge"><i class="fa-solid fa-earth-asia" style="margin-right:6px;"></i> Middle East</span>
+            <span class="emmaus-market-badge"><i class="fa-solid fa-earth-asia" style="margin-right:6px;"></i> Asia</span>
+            <span class="emmaus-market-badge"><i class="fa-solid fa-earth-africa" style="margin-right:6px;"></i> Africa</span>
+            <span class="emmaus-market-badge"><i class="fa-solid fa-earth-americas" style="margin-right:6px;"></i> North America</span>
+         </div>
+      </div>
+   </section>
+</main>
+
+{% endblock page_content %}

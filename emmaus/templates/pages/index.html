@@ -1,0 +1,380 @@
+{% extends 'landing.html' %}
+
+{% load static %}
+
+{% block title %}Emmaus Import Export PLC{% endblock title %}
+
+{% block page_content %}
+
+<!-- offcanvas mobile menu -->
+<div class="ca-offcanvas w-bg">
+   <div class="ca-offcanvas-wrapper">
+      <div class="ca-offcanvas-header d-flex justify-content-between align-items-center mb-40">
+         <div class="ca-offcanvas-logo">
+            <a href="{% url 'pages:dashboard' %}"><img src="{% static 'images/logo/emmaus-logo.png' %}" alt="Emmaus" style="max-height:40px;"></a>
+         </div>
+         <div class="ca-offcanvas-close">
+            <button class="ca-offcanvas-close-toggle"><i class="fal fa-times"></i></button>
+         </div>
+      </div>
+      <div class="ca-offcanvas-menu-3 mb-40">
+         <nav>
+            <ul>
+               <li><a href="{% url 'pages:dashboard' %}">Home</a></li>
+               <li><a href="{% url 'pages:dynamic_pages' template_name='about' %}">About Us</a></li>
+               <li><a href="{% url 'pages:dynamic_pages' template_name='products' %}">Export Products</a></li>
+               <li><a href="{% url 'pages:dynamic_pages' template_name='imports' %}">Import Solutions</a></li>
+               <li><a href="{% url 'pages:dynamic_pages' template_name='contact' %}">Contact</a></li>
+            </ul>
+         </nav>
+      </div>
+      <div class="ca-offcanvas-contact-info mb-40">
+         <h3 class="ca-offcanvas-sm-title">Contact Info</h3>
+         <div class="ca-sm-single-item-4 ca-sm-single-item-1 mb-20">
+            <div class="icon"><span><i class="fa-solid fa-location-dot"></i></span></div>
+            <div class="ca-sm-single-item-4-content">
+               <p>Lemi Kura Sub-city, Woreda 08, Addis Ababa, Ethiopia</p>
+            </div>
+         </div>
+         <div class="ca-sm-single-item-4 ca-sm-single-item-1 mb-20">
+            <div class="icon"><span><i class="fa-solid fa-phone"></i></span></div>
+            <div class="ca-sm-single-item-4-content">
+               <p><a href="tel:+251911192862">+251 91 1192862</a></p>
+            </div>
+         </div>
+         <div class="ca-sm-single-item-4 ca-sm-single-item-1 mb-20">
+            <div class="icon"><span><i class="fa-solid fa-envelope"></i></span></div>
+            <div class="ca-sm-single-item-4-content">
+               <p><a href="mailto:info@emmausimportexport.com">info@emmausimportexport.com</a></p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="ca-offcanvas-overlay"></div>
+
+<main>
+   <!-- hero section -->
+   <section class="emmaus-hero">
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-lg-7">
+               <span class="hero-badge">Emmaus Import Export PLC</span>
+               <h1>Premium Ethiopian Agricultural Products for the World</h1>
+               <p class="pb-32">Whether you are looking for high-quality spices, oilseeds, pulses, or other agricultural commodities, Emmaus Import Export PLC is your trusted sourcing partner.</p>
+               <div class="hero3-btn">
+                  <a href="{% url 'pages:dynamic_pages' template_name='products' %}"
+                     class="ca-btn-primary-3 theme-bg-3 text-white br-50" style="background:#fff;color:#1a5279 !important;">Our Products <span><i class="fa-solid fa-angle-right"></i></span></a>
+                  <a href="{% url 'pages:dynamic_pages' template_name='contact' %}"
+                     class="ca-sec-primary-3 br-50" style="color:#fff;border-color:rgba(255,255,255,0.5);">Request Quote <span><i class="fa-solid fa-angle-right"></i></span></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- tagline bar -->
+   <div class="emmaus-stats">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-3 col-6">
+               <div class="emmaus-stat-item">
+                  <h3><span class="counter">5</span>+</h3>
+                  <p>Continents Served</p>
+               </div>
+            </div>
+            <div class="col-md-3 col-6">
+               <div class="emmaus-stat-item">
+                  <h3><span class="counter">15</span>+</h3>
+                  <p>Product Lines</p>
+               </div>
+            </div>
+            <div class="col-md-3 col-6">
+               <div class="emmaus-stat-item">
+                  <h3><span class="counter">100</span>%</h3>
+                  <p>Quality Inspected</p>
+               </div>
+            </div>
+            <div class="col-md-3 col-6">
+               <div class="emmaus-stat-item">
+                  <h3>24/7</h3>
+                  <p>Customer Support</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- about section -->
+   <section class="emmaus-section">
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-lg-6 mb-30">
+               <img class="w-100" style="border-radius:12px;" src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&q=80" alt="Ethiopian agriculture">
+            </div>
+            <div class="col-lg-6 mb-30">
+               <span class="emmaus-section-subtitle">About Us</span>
+               <h2 class="emmaus-section-title">Connecting Ethiopia's Agricultural Heritage to the World</h2>
+               <p class="pt-16 pb-20">Emmaus Import Export PLC was established with a vision to become one of Ethiopia's leading agricultural export companies. We specialize in sourcing, processing, and exporting premium Ethiopian agricultural products that meet international quality standards.</p>
+               <p class="pb-24">Our experienced team works closely with farmers, cooperatives, and suppliers to ensure consistent quality, traceability, and timely delivery.</p>
+               <div class="ca-ab-item-check">
+                  <div class="ca-ab-sngle-item">
+                     <div class="ca-ab-sngle-item-ic"><span><i class="fa-solid fa-check"></i></span></div>
+                     <div class="ca-ab-sngle-item-content"><h4 class="ca-item-ch-title">Premium Quality Products</h4></div>
+                  </div>
+                  <div class="ca-ab-sngle-item">
+                     <div class="ca-ab-sngle-item-ic"><span><i class="fa-solid fa-check"></i></span></div>
+                     <div class="ca-ab-sngle-item-content"><h4 class="ca-item-ch-title">International Standards Compliance</h4></div>
+                  </div>
+                  <div class="ca-ab-sngle-item">
+                     <div class="ca-ab-sngle-item-ic"><span><i class="fa-solid fa-check"></i></span></div>
+                     <div class="ca-ab-sngle-item-content"><h4 class="ca-item-ch-title">Reliable Supply & Timely Delivery</h4></div>
+                  </div>
+                  <div class="ca-ab-sngle-item">
+                     <div class="ca-ab-sngle-item-ic"><span><i class="fa-solid fa-check"></i></span></div>
+                     <div class="ca-ab-sngle-item-content"><h4 class="ca-item-ch-title">Sustainable Partnerships</h4></div>
+                  </div>
+               </div>
+               <div class="pt-24">
+                  <a href="{% url 'pages:dynamic_pages' template_name='about' %}" class="ca-btn-primary-3 theme-bg-3 text-white br-50">Learn More <span><i class="fa-solid fa-angle-right"></i></span></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- product categories section -->
+   <section class="emmaus-section emmaus-section-gray">
+      <div class="container">
+         <div class="text-center mb-60" data-aos="fade-up" data-aos-duration="800">
+            <span class="emmaus-section-subtitle">Our Products</span>
+            <h2 class="emmaus-section-title">Premium Ethiopian Export Products</h2>
+            <p class="pt-16">We source, process, and export the finest agricultural products from Ethiopia's rich farmlands.</p>
+         </div>
+         <div class="row">
+            <!-- Oilseeds -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800">
+               <div class="emmaus-product-card">
+                  <div class="product-img">
+                     <img src="{% static 'images/products/humera-sesame-seed.png' %}" alt="Sesame Seeds">
+                  </div>
+                  <div class="product-content">
+                     <h4>Oilseeds</h4>
+                     <p>Black Cumin (Nigella Sativa), Sesame Seeds, Niger Seeds, Linseed - sourced from Ethiopia's premier growing regions.</p>
+                  </div>
+               </div>
+            </div>
+            <!-- Spices -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1000">
+               <div class="emmaus-product-card">
+                  <div class="product-img">
+                     <img src="{% static 'images/products/turmeric-finger.png' %}" alt="Turmeric">
+                  </div>
+                  <div class="product-content">
+                     <h4>Spices</h4>
+                     <p>Turmeric, Ginger, Coriander, Cumin, Fenugreek, Cardamom, Long Pepper, Chili Pepper - authentic Ethiopian flavors.</p>
+                  </div>
+               </div>
+            </div>
+            <!-- Pulses -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1200">
+               <div class="emmaus-product-card">
+                  <div class="product-img">
+                     <img src="{% static 'images/products/green-mung-bean.jpg' %}" alt="Green Mung Bean">
+                  </div>
+                  <div class="product-content">
+                     <h4>Pulses</h4>
+                     <p>Chickpeas, Green Mung Beans, Red Kidney Beans, White Beans, Pinto Beans, Soya Beans and more.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="text-center pt-30">
+            <a href="{% url 'pages:dynamic_pages' template_name='products' %}" class="ca-btn-primary-3 theme-bg-3 text-white br-50">View All Products <span><i class="fa-solid fa-angle-right"></i></span></a>
+         </div>
+      </div>
+   </section>
+
+   <!-- why choose us section -->
+   <section class="emmaus-section">
+      <div class="container">
+         <div class="text-center mb-60" data-aos="fade-up" data-aos-duration="800">
+            <span class="emmaus-section-subtitle">Why Emmaus</span>
+            <h2 class="emmaus-section-title">Why Choose Emmaus Import Export PLC?</h2>
+         </div>
+         <div class="row">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800">
+               <div class="emmaus-value-card">
+                  <div class="value-icon"><i class="fa-solid fa-award"></i></div>
+                  <h4>Premium Quality</h4>
+                  <p>Every product undergoes careful selection and quality inspection before shipment.</p>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1000">
+               <div class="emmaus-value-card">
+                  <div class="value-icon"><i class="fa-solid fa-handshake"></i></div>
+                  <h4>Reliable Supply</h4>
+                  <p>Strong relationships with producers ensure consistent product availability.</p>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1200">
+               <div class="emmaus-value-card">
+                  <div class="value-icon"><i class="fa-solid fa-globe"></i></div>
+                  <h4>International Standards</h4>
+                  <p>We adhere to international quality, packaging, and export requirements.</p>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800">
+               <div class="emmaus-value-card">
+                  <div class="value-icon"><i class="fa-solid fa-headset"></i></div>
+                  <h4>Customer Focus</h4>
+                  <p>We provide responsive communication, customized solutions, and dependable service.</p>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1000">
+               <div class="emmaus-value-card">
+                  <div class="value-icon"><i class="fa-solid fa-leaf"></i></div>
+                  <h4>Sustainable Partnerships</h4>
+                  <p>We support responsible sourcing and work to create shared value across the supply chain.</p>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1200">
+               <div class="emmaus-value-card">
+                  <div class="value-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                  <h4>Import Solutions</h4>
+                  <p>We also import vehicles, chemicals, machinery, and electronics for Ethiopian businesses.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- markets section -->
+   <section class="emmaus-section emmaus-section-gray">
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-lg-6 mb-30">
+               <span class="emmaus-section-subtitle">Global Reach</span>
+               <h2 class="emmaus-section-title">Markets We Serve</h2>
+               <p class="pt-16 pb-24">We proudly supply customers across five continents. We welcome inquiries from importers, wholesalers, distributors, food manufacturers, and retailers worldwide.</p>
+               <div>
+                  <span class="emmaus-market-badge"><i class="fa-solid fa-earth-europe" style="margin-right:6px;"></i> Europe</span>
+                  <span class="emmaus-market-badge"><i class="fa-solid fa-earth-asia" style="margin-right:6px;"></i> Middle East</span>
+                  <span class="emmaus-market-badge"><i class="fa-solid fa-earth-asia" style="margin-right:6px;"></i> Asia</span>
+                  <span class="emmaus-market-badge"><i class="fa-solid fa-earth-africa" style="margin-right:6px;"></i> Africa</span>
+                  <span class="emmaus-market-badge"><i class="fa-solid fa-earth-americas" style="margin-right:6px;"></i> North America</span>
+               </div>
+            </div>
+            <div class="col-lg-6 mb-30">
+               <img class="w-100" style="border-radius:12px;" src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&q=80" alt="Global shipping">
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- contact section -->
+   <section class="emmaus-section">
+      <div class="container">
+         <div class="text-center mb-60" data-aos="fade-up" data-aos-duration="800">
+            <span class="emmaus-section-subtitle">Contact Us</span>
+            <h2 class="emmaus-section-title">Get in Touch</h2>
+            <p class="pt-16">Contact Emmaus Import Export PLC today for product specifications, pricing, packaging options, and shipment details.</p>
+         </div>
+         <div class="row align-items-center">
+            <div class="col-xl-6 mb-30">
+               <div class="ca-contact-from w-bg ca-contact-from-3" data-aos="fade-right" data-aos-duration="1200">
+                  <div class="ca-contact-content-3">
+                     <h4 class="ca-contact-title-2 theme-black-2 fnw-600">Request a Quote</h4>
+                     <p class="pt-16 pb-24">Our team is ready to help you source premium Ethiopian products with confidence.</p>
+                  </div>
+                  <form action="#">
+                     <div class="row">
+                        <div class="col-md-6 mb-20">
+                           <input type="text" placeholder="Full Name">
+                        </div>
+                        <div class="col-md-6 mb-20">
+                           <input type="text" placeholder="Company Name">
+                        </div>
+                        <div class="col-md-6 mb-20">
+                           <input type="tel" placeholder="Phone Number">
+                        </div>
+                        <div class="col-md-6 mb-20">
+                           <input type="email" placeholder="Email Address">
+                        </div>
+                        <div class="col-md-12 mb-20">
+                           <select class="nice-select wide ca-select">
+                              <option data-display="Product Interest">Select Product</option>
+                              <option value="1">Oilseeds</option>
+                              <option value="2">Spices</option>
+                              <option value="3">Pulses</option>
+                              <option value="4">Import Products</option>
+                              <option value="5">Other</option>
+                           </select>
+                        </div>
+                        <div class="col-md-12 mb-20">
+                           <textarea name="message" id="message" placeholder="Tell us about your requirements..."></textarea>
+                        </div>
+                        <div class="submit-btn">
+                           <button class="ca-btn-primary-3 theme-bg-3 text-white br-50" type="submit" value="submit">
+                              Send Message <span><i class="fa-solid fa-angle-right"></i></span></button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+            <div class="col-xl-6 mb-30">
+               <div class="ca-form-loca-3 ml-50" data-aos="fade-left" data-aos-duration="1400">
+                  <div class="ca-location-3 mb-20">
+                     <div class="ca-location-icbox">
+                        <div class="ca-location-icbox-img">
+                           <span><i class="fa-solid fa-location-dot" style="font-size:24px;color:#1a5279;"></i></span>
+                        </div>
+                        <div class="ca-location-icbox-text">
+                           <h4 class="ca-title fnw-600 theme-black-3 pb-12">Our Office</h4>
+                           <p>Lemi Kura Sub-city, Woreda 08, RIM SEVEN Bldg.<br>(In front of Civil Service College) House No. 801<br>Addis Ababa, Ethiopia</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="ca-location-3 mb-20">
+                     <div class="ca-location-icbox">
+                        <div class="ca-location-icbox-img">
+                           <span><i class="fa-solid fa-phone" style="font-size:24px;color:#1a5279;"></i></span>
+                        </div>
+                        <div class="ca-location-icbox-text">
+                           <h4 class="ca-title fnw-600 theme-black-3 pb-12">Call Us</h4>
+                           <a href="tel:+251911192862">+251 91 1192862</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="ca-location-3 mb-20">
+                     <div class="ca-location-icbox">
+                        <div class="ca-location-icbox-img">
+                           <span><i class="fa-solid fa-envelope" style="font-size:24px;color:#1a5279;"></i></span>
+                        </div>
+                        <div class="ca-location-icbox-text">
+                           <h4 class="ca-title fnw-600 theme-black-3 pb-12">Email</h4>
+                           <a href="mailto:info@emmausimportexport.com">info@emmausimportexport.com</a><br>
+                           <a href="mailto:Abel.Isayas@iqfortune.com">Abel.Isayas@iqfortune.com</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="ca-location-3 mb-20">
+                     <div class="ca-location-icbox">
+                        <div class="ca-location-icbox-img">
+                           <span><i class="fa-solid fa-clock" style="font-size:24px;color:#1a5279;"></i></span>
+                        </div>
+                        <div class="ca-location-icbox-text">
+                           <h4 class="ca-title fnw-600 theme-black-3 pb-12">Business Hours</h4>
+                           <p>Monday - Friday<br>8:30 AM - 5:30 PM (EAT)</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+</main>
+
+{% endblock page_content %}
