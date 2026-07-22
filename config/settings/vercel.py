@@ -43,9 +43,6 @@ STORAGES = {
     },
 }
 
-# Remove whitenoise from middleware - use Django's built-in static serving
-MIDDLEWARE = [m for m in MIDDLEWARE if "whitenoise" not in m.lower()]
-
 # EMAIL
 # ------------------------------------------------------------------------------
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
