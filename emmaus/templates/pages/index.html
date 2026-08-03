@@ -6,53 +6,6 @@
 
 {% block page_content %}
 
-<!-- offcanvas mobile menu -->
-<div class="ca-offcanvas w-bg">
-   <div class="ca-offcanvas-wrapper">
-      <div class="ca-offcanvas-header d-flex justify-content-between align-items-center mb-40">
-         <div class="ca-offcanvas-logo">
-            <a href="{% url 'pages:dashboard' %}"><img src="{% static 'images/logo/emmaus-logo.png' %}" alt="Emmaus" style="max-height:40px;"></a>
-         </div>
-         <div class="ca-offcanvas-close">
-            <button class="ca-offcanvas-close-toggle"><i class="fal fa-times"></i></button>
-         </div>
-      </div>
-      <div class="ca-offcanvas-menu-3 mb-40">
-         <nav>
-            <ul>
-               <li><a href="{% url 'pages:dashboard' %}">Home</a></li>
-               <li><a href="{% url 'pages:dynamic_pages' template_name='about' %}">About Us</a></li>
-               <li><a href="{% url 'pages:dynamic_pages' template_name='products' %}">Export Products</a></li>
-               <li><a href="{% url 'pages:dynamic_pages' template_name='imports' %}">Import Solutions</a></li>
-               <li><a href="{% url 'pages:dynamic_pages' template_name='contact' %}">Contact</a></li>
-            </ul>
-         </nav>
-      </div>
-      <div class="ca-offcanvas-contact-info mb-40">
-         <h3 class="ca-offcanvas-sm-title">Contact Info</h3>
-         <div class="ca-sm-single-item-4 ca-sm-single-item-1 mb-20">
-            <div class="icon"><span><i class="fa-solid fa-location-dot"></i></span></div>
-            <div class="ca-sm-single-item-4-content">
-               <p>Lemi Kura Sub-city, Woreda 08, Addis Ababa, Ethiopia</p>
-            </div>
-         </div>
-         <div class="ca-sm-single-item-4 ca-sm-single-item-1 mb-20">
-            <div class="icon"><span><i class="fa-solid fa-phone"></i></span></div>
-            <div class="ca-sm-single-item-4-content">
-               <p><a href="tel:+251911192862">+251 91 1192862</a></p>
-            </div>
-         </div>
-         <div class="ca-sm-single-item-4 ca-sm-single-item-1 mb-20">
-            <div class="icon"><span><i class="fa-solid fa-envelope"></i></span></div>
-            <div class="ca-sm-single-item-4-content">
-               <p><a href="mailto:info@emmausimportexport.com">info@emmausimportexport.com</a></p>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-<div class="ca-offcanvas-overlay"></div>
-
 <main>
    <!-- hero section -->
    <section class="emmaus-hero">
@@ -354,7 +307,7 @@
                         <div class="ca-location-icbox-text">
                            <h4 class="ca-title fnw-600 theme-black-3 pb-12">Email</h4>
                            <a href="mailto:info@emmausimportexport.com">info@emmausimportexport.com</a><br>
-                           <a href="mailto:Abel.Isayas@iqfortune.com">Abel.Isayas@iqfortune.com</a>
+                           <a href="mailto:Abel.isayas@Emmausimportexport.com">Abel.isayas@Emmausimportexport.com</a>
                         </div>
                      </div>
                   </div>
@@ -365,7 +318,7 @@
                         </div>
                         <div class="ca-location-icbox-text">
                            <h4 class="ca-title fnw-600 theme-black-3 pb-12">Business Hours</h4>
-                           <p>Monday - Friday<br>8:30 AM - 5:30 PM (EAT)</p>
+                           <p>Monday - Friday: 8:30 AM - 5:30 PM (EAT)<br>Saturday: 8:30 AM - 12:30 PM</p>
                         </div>
                      </div>
                   </div>

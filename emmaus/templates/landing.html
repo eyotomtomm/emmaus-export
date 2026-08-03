@@ -10,6 +10,45 @@
 
 {% include 'partials/preloader.html' %}
 
+<!-- offcanvas mobile menu -->
+<div class="ca-offcanvas w-bg">
+   <div class="ca-offcanvas-wrapper">
+      <div class="ca-offcanvas-header d-flex justify-content-between align-items-center mb-40">
+         <div class="ca-offcanvas-logo">
+            <a href="{% url 'pages:dashboard' %}"><img src="{% static 'images/logo/emmaus-logo.png' %}" alt="Emmaus" style="max-height:40px;"></a>
+         </div>
+         <div class="ca-offcanvas-close">
+            <button class="ca-offcanvas-close-toggle"><i class="fal fa-times"></i></button>
+         </div>
+      </div>
+      <div class="ca-offcanvas-menu-3 mb-40">
+         <nav></nav>
+      </div>
+      <div class="ca-offcanvas-contact-info mb-40">
+         <h3 class="ca-offcanvas-sm-title">Contact Info</h3>
+         <div class="ca-sm-single-item-4 ca-sm-single-item-1 mb-20">
+            <div class="icon"><span><i class="fa-solid fa-location-dot"></i></span></div>
+            <div class="ca-sm-single-item-4-content">
+               <p>Lemi Kura Sub-city, Woreda 08, Addis Ababa, Ethiopia</p>
+            </div>
+         </div>
+         <div class="ca-sm-single-item-4 ca-sm-single-item-1 mb-20">
+            <div class="icon"><span><i class="fa-solid fa-phone"></i></span></div>
+            <div class="ca-sm-single-item-4-content">
+               <p><a href="tel:+251911192862">+251 91 1192862</a></p>
+            </div>
+         </div>
+         <div class="ca-sm-single-item-4 ca-sm-single-item-1 mb-20">
+            <div class="icon"><span><i class="fa-solid fa-envelope"></i></span></div>
+            <div class="ca-sm-single-item-4-content">
+               <p><a href="mailto:info@emmausimportexport.com">info@emmausimportexport.com</a></p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="ca-offcanvas-overlay"></div>
+
 {% include 'partials/header.html' %}
 
 {% block page_content %}{% endblock page_content %}

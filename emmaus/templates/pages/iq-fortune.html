@@ -1,0 +1,142 @@
+{% extends 'landing.html' %}
+
+{% load static %}
+
+{% block title %}IQ Fortune - Sister Company | Emmaus Import Export PLC{% endblock title %}
+
+{% block page_content %}
+
+<main>
+   <!-- breadcrumb area start -->
+   <section class="emmaus-breadcrumb p-relative z-index-1 fix" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80'); background-size: cover; background-position: center;">
+      <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg, rgba(26,82,121,0.9) 0%, rgba(45,48,55,0.88) 100%);z-index:0;"></div>
+      <div class="container" style="position:relative;z-index:2;">
+         <div class="text-center">
+            <h2 class="ca-breadcrumb-title fnw-600" style="color:#fff;">Our Sister Company</h2>
+            <p style="color:rgba(255,255,255,0.8);margin-top:10px;">Expanding our reach through strategic partnerships</p>
+            <div class="it-breadcum-link" style="margin-top:16px;">
+               <a href="{% url 'pages:dashboard' %}" style="color:rgba(255,255,255,0.8);">Home</a>
+               <span style="color:rgba(255,255,255,0.6);"><i class="fa-solid fa-angle-right"></i></span>
+               <a href="{% url 'pages:dynamic_pages' template_name='about' %}" style="color:rgba(255,255,255,0.8);">About Us</a>
+               <span style="color:rgba(255,255,255,0.6);"><i class="fa-solid fa-angle-right"></i></span>
+               <a class="active" href="#" style="color:#fff;">IQ Fortune</a>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- breadcrumb area end -->
+
+   <!-- iq fortune intro section start -->
+   <section class="emmaus-section">
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-lg-5 mb-30" data-aos="fade-right" data-aos-duration="1000">
+               <div class="text-center">
+                  <img src="{% static 'images/logo/iq-fortune-logo.jpeg' %}" alt="IQ Fortune Logo" style="max-width:100%;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.12);">
+               </div>
+            </div>
+            <div class="col-lg-7 mb-30" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+               <div class="ca-ab-content3">
+                  <div class="ca-about-content-3 ca-sec-content-3">
+                     <span class="emmaus-section-subtitle">Sister Company</span>
+                     <h2 class="emmaus-section-title">IQ Fortune</h2>
+                     <p class="pt-16 pb-32">IQ Fortune is a sister company of Emmaus Import Export PLC, extending our business portfolio beyond agricultural trade. As part of the Emmaus family, IQ Fortune shares our commitment to excellence, integrity, and building lasting partnerships.</p>
+                     <p class="pb-16">Together, Emmaus Import Export PLC and IQ Fortune work hand in hand to deliver greater value to our partners and clients, combining expertise across multiple sectors to create comprehensive business solutions.</p>
+                     <div class="pb-32">
+                        <p style="margin-bottom:8px;"><i class="fa-solid fa-envelope" style="color:#1a5279;margin-right:8px;"></i> <a href="mailto:Abel.isayas@Emmausimportexport.com" style="color:#5a5d63;">Abel.isayas@Emmausimportexport.com</a></p>
+                        <p style="margin-bottom:8px;"><i class="fa-solid fa-clock" style="color:#1a5279;margin-right:8px;"></i> Mon - Fri: 8:30 AM - 5:30 PM (EAT) | Sat: 8:30 AM - 12:30 PM</p>
+                     </div>
+                  </div>
+                  <div class="ca-ab-item-check">
+                     <div class="ca-ab-sngle-item">
+                        <div class="ca-ab-sngle-item-ic">
+                           <span><i class="fa-solid fa-check"></i></span>
+                        </div>
+                        <div class="ca-ab-sngle-item-content">
+                           <h4 class="ca-item-ch-title">Part of the Emmaus Family</h4>
+                        </div>
+                     </div>
+                     <div class="ca-ab-sngle-item">
+                        <div class="ca-ab-sngle-item-ic">
+                           <span><i class="fa-solid fa-check"></i></span>
+                        </div>
+                        <div class="ca-ab-sngle-item-content">
+                           <h4 class="ca-item-ch-title">Shared Values of Excellence &amp; Integrity</h4>
+                        </div>
+                     </div>
+                     <div class="ca-ab-sngle-item">
+                        <div class="ca-ab-sngle-item-ic">
+                           <span><i class="fa-solid fa-check"></i></span>
+                        </div>
+                        <div class="ca-ab-sngle-item-content">
+                           <h4 class="ca-item-ch-title">Expanding Business Horizons Together</h4>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- iq fortune intro section end -->
+
+   <!-- partnership section start -->
+   <section class="emmaus-section emmaus-section-gray">
+      <div class="container">
+         <div class="text-center mb-60" data-aos="fade-up" data-aos-duration="800">
+            <span class="emmaus-section-subtitle">Stronger Together</span>
+            <h2 class="emmaus-section-title">Our Partnership</h2>
+            <p class="pt-16">Emmaus Import Export PLC and IQ Fortune complement each other to deliver comprehensive solutions.</p>
+         </div>
+         <div class="row">
+            <div class="col-lg-4 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
+               <div class="emmaus-value-card">
+                  <div class="value-icon">
+                     <i class="fa-solid fa-handshake"></i>
+                  </div>
+                  <h4>Shared Vision</h4>
+                  <p>United by common goals and a shared commitment to delivering value to our partners worldwide.</p>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+               <div class="emmaus-value-card">
+                  <div class="value-icon">
+                     <i class="fa-solid fa-chart-line"></i>
+                  </div>
+                  <h4>Business Growth</h4>
+                  <p>Expanding our reach and capabilities through strategic collaboration across sectors.</p>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+               <div class="emmaus-value-card">
+                  <div class="value-icon">
+                     <i class="fa-solid fa-globe"></i>
+                  </div>
+                  <h4>Global Reach</h4>
+                  <p>Together, we serve a broader market and provide more comprehensive solutions to our clients.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- partnership section end -->
+
+   <!-- cta section start -->
+   <section class="emmaus-section" style="background:linear-gradient(135deg, #1a5279 0%, #2d3037 100%);padding:80px 0;">
+      <div class="container">
+         <div class="row align-items-center" data-aos="fade-up" data-aos-duration="1000">
+            <div class="col-lg-8 mb-30">
+               <h2 class="ca-section-title text-white fnw-700" style="margin-bottom:12px;">Interested in Working with Us?</h2>
+               <p style="color:rgba(255,255,255,0.85);font-size:17px;">Whether through Emmaus Import Export PLC or IQ Fortune, we are ready to explore partnership opportunities with you.</p>
+            </div>
+            <div class="col-lg-4 mb-30 text-lg-end">
+               <a href="{% url 'pages:dynamic_pages' template_name='contact' %}" class="ca-btn-primary-3 w-bg br-50">Contact Us <span><i class="fa-solid fa-angle-right"></i></span></a>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- cta section end -->
+
+</main>
+
+{% endblock page_content %}

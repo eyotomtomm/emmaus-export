@@ -46,6 +46,14 @@
 footer.theme-bg-3 {
     background: #2d3037;
 }
+footer .ca-ft-area {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+footer .ca-footer.widget-4 .ca-ft-content p {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
 
 /* Hero section */
 .emmaus-hero {
