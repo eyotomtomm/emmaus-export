@@ -297,7 +297,7 @@ footer .ca-footer.widget-4 .ca-ft-content p {
 /* Breadcrumb */
 .emmaus-breadcrumb {
     background: linear-gradient(135deg, #1a5279 0%, #2d3037 100%);
-    padding: 140px 0 50px;
+    padding: 180px 0 60px;
     text-align: center;
 }
 .emmaus-breadcrumb h2 {
@@ -370,7 +370,7 @@ footer .ca-footer.widget-4 .ca-ft-content p {
         font-size: 28px;
     }
     .emmaus-breadcrumb {
-        padding: 120px 0 40px;
+        padding: 150px 0 40px;
     }
     .emmaus-breadcrumb h2 {
         font-size: 28px;
@@ -471,7 +471,7 @@ footer .ca-footer.widget-4 .ca-ft-content p {
 
     /* Breadcrumb */
     .emmaus-breadcrumb {
-        padding: 110px 0 30px;
+        padding: 130px 0 30px;
     }
     .emmaus-breadcrumb h2 {
         font-size: 24px;
