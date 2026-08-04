@@ -329,15 +329,282 @@ footer .ca-footer.widget-4 .ca-ft-content p {
     margin-top: 8px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .emmaus-hero h1 {
-        font-size: 32px;
+/* ============================================
+   RESPONSIVE - Large screens (1600px+)
+   ============================================ */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1400px;
     }
+    .emmaus-hero h1 {
+        font-size: 56px;
+    }
+    .emmaus-hero p {
+        font-size: 20px;
+    }
+    .emmaus-section-title {
+        font-size: 42px;
+    }
+    .emmaus-product-card .product-img {
+        height: 260px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - Tablet (768px - 991px)
+   ============================================ */
+@media (min-width: 768px) and (max-width: 991px) {
     .emmaus-hero {
-        padding: 100px 0 80px;
+        padding: 120px 0 80px;
+    }
+    .emmaus-hero h1 {
+        font-size: 36px;
+    }
+    .emmaus-hero p {
+        font-size: 16px;
+    }
+    .emmaus-section {
+        padding: 60px 0;
     }
     .emmaus-section-title {
         font-size: 28px;
+    }
+    .emmaus-breadcrumb {
+        padding: 120px 0 40px;
+    }
+    .emmaus-breadcrumb h2 {
+        font-size: 28px;
+    }
+    .emmaus-stats {
+        padding: 40px 0;
+    }
+    .emmaus-stat-item h3 {
+        font-size: 32px;
+    }
+    .emmaus-stat-item p {
+        font-size: 14px;
+    }
+    .emmaus-product-card .product-img {
+        height: 180px;
+    }
+    .emmaus-product-card .product-content {
+        padding: 16px;
+    }
+    .emmaus-product-card .product-content h4 {
+        font-size: 17px;
+    }
+    .emmaus-product-card .product-content p {
+        font-size: 13px;
+    }
+    .emmaus-product-card .product-specs {
+        padding: 0 16px 16px;
+    }
+    .emmaus-value-card {
+        padding: 20px;
+    }
+    .emmaus-import-card {
+        padding: 24px 20px;
+    }
+    .emmaus-market-badge {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+    .hero3-btn {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    footer .ca-ft-area {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - Mobile (max-width: 767px)
+   ============================================ */
+@media (max-width: 767px) {
+    /* Hero */
+    .emmaus-hero {
+        padding: 110px 0 60px;
+    }
+    .emmaus-hero h1 {
+        font-size: 26px;
+        line-height: 1.3;
+        margin-bottom: 16px;
+    }
+    .emmaus-hero p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    .emmaus-hero .hero-badge {
+        font-size: 12px;
+        padding: 6px 14px;
+        margin-bottom: 16px;
+    }
+    .hero3-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero3-btn a {
+        text-align: center;
+    }
+
+    /* Sections */
+    .emmaus-section {
+        padding: 50px 0;
+    }
+    .emmaus-section-title {
+        font-size: 24px;
+        line-height: 1.3;
+        margin-bottom: 12px;
+    }
+    .emmaus-section-subtitle {
+        font-size: 12px;
+        padding: 5px 14px;
+        margin-bottom: 12px;
+    }
+    .mb-60 {
+        margin-bottom: 30px !important;
+    }
+
+    /* Breadcrumb */
+    .emmaus-breadcrumb {
+        padding: 110px 0 30px;
+    }
+    .emmaus-breadcrumb h2 {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+    .emmaus-breadcrumb p {
+        font-size: 14px;
+    }
+    .it-breadcum-link a,
+    .it-breadcum-link span {
+        font-size: 13px;
+    }
+
+    /* Stats */
+    .emmaus-stats {
+        padding: 30px 0;
+    }
+    .emmaus-stat-item {
+        padding: 12px 8px;
+    }
+    .emmaus-stat-item h3 {
+        font-size: 28px;
+    }
+    .emmaus-stat-item p {
+        font-size: 12px;
+        margin-top: 4px;
+    }
+
+    /* Product cards */
+    .emmaus-product-card .product-img {
+        height: 180px;
+        padding: 15px;
+    }
+    .emmaus-product-card .product-content {
+        padding: 16px;
+    }
+    .emmaus-product-card .product-content h4 {
+        font-size: 17px;
+        margin-bottom: 8px;
+    }
+    .emmaus-product-card .product-content p {
+        font-size: 13px;
+    }
+    .emmaus-product-card .product-specs {
+        padding: 0 16px 16px;
+    }
+    .emmaus-product-card .product-specs li {
+        font-size: 12px;
+    }
+
+    /* Value cards */
+    .emmaus-value-card {
+        padding: 20px;
+        margin-bottom: 16px;
+    }
+    .emmaus-value-card .value-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    .emmaus-value-card h4 {
+        font-size: 16px;
+    }
+    .emmaus-value-card p {
+        font-size: 13px;
+    }
+
+    /* Import cards */
+    .emmaus-import-card {
+        padding: 24px 20px;
+        margin-bottom: 16px;
+    }
+    .emmaus-import-card .import-icon {
+        font-size: 30px;
+        margin-bottom: 12px;
+    }
+    .emmaus-import-card h4 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    /* Market badges */
+    .emmaus-market-badge {
+        padding: 8px 14px;
+        font-size: 13px;
+        margin: 4px;
+    }
+
+    /* Contact section */
+    .emmaus-contact-info {
+        padding: 24px;
+    }
+    .ca-contact-from.ca-contact-from-3 {
+        padding: 15px;
+    }
+
+    /* Footer */
+    footer .ca-ft-area {
+        padding: 15px 12px;
+    }
+    footer .ca-footer h4.ca-title {
+        font-size: 18px;
+        padding-bottom: 16px !important;
+    }
+    footer .ca-ft-content p,
+    footer .ca-footer-menu ul li a {
+        font-size: 14px;
+    }
+    .cta-title-1 {
+        font-size: 22px !important;
+        line-height: 1.3 !important;
+    }
+
+    /* CTA sections */
+    section[style*="linear-gradient"] .ca-section-title {
+        font-size: 22px !important;
+        line-height: 1.3;
+    }
+    section[style*="linear-gradient"] p {
+        font-size: 14px;
+    }
+
+    /* About page check items */
+    .ca-ab-item-check {
+        display: block;
+    }
+    .ca-ab-sngle-item {
+        margin-bottom: 8px;
+    }
+
+    /* Images */
+    img.w-100 {
+        margin-bottom: 20px;
     }
 }
