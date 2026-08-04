@@ -1,4 +1,9 @@
 {
+  "build": {
+    "env": {
+      "DJANGO_SETTINGS_MODULE": "config.settings.vercel"
+    }
+  },
   "rewrites": [
     { "source": "/(.*)", "destination": "/api/wsgi" }
   ]
