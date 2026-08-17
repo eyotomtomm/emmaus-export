@@ -47,12 +47,27 @@ footer.theme-bg-3 {
     background: #2d3037;
 }
 footer .ca-ft-area {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 48px 40px 28px;
+    border-radius: 8px;
+}
+footer .ca-footer.widget-3,
+footer .ca-footer.widget-4 {
+    margin-left: 0;
 }
 footer .ca-footer.widget-4 .ca-ft-content p {
     word-break: break-word;
     overflow-wrap: break-word;
+}
+footer .ca-footer-social-3 ul li a {
+    background: #e8f0f7;
+    color: #1a5279;
+}
+footer .ca-footer-social-3 ul li a:hover {
+    background: #1a5279;
+    color: #fff;
+}
+footer .ca-footer-menu-3 ul li a:hover {
+    color: #1a5279;
 }
 
 /* Hero section */
@@ -70,7 +85,7 @@ footer .ca-footer.widget-4 .ca-ft-content p {
     width: 100%;
     height: 100%;
     background: url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1920&q=80') center/cover no-repeat;
-    opacity: 0.15;
+    opacity: 0.55;
 }
 .emmaus-hero .container {
     position: relative;
@@ -415,8 +430,7 @@ footer .ca-footer.widget-4 .ca-ft-content p {
         gap: 10px;
     }
     footer .ca-ft-area {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding: 36px 24px 20px;
     }
 }
 
@@ -571,7 +585,7 @@ footer .ca-footer.widget-4 .ca-ft-content p {
 
     /* Footer */
     footer .ca-ft-area {
-        padding: 15px 12px;
+        padding: 30px 16px 20px;
     }
     footer .ca-footer h4.ca-title {
         font-size: 18px;

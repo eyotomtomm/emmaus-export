@@ -1,87 +1,60 @@
 {% load static %}
-<footer class="theme-bg-3 pt-30 p-relative z-index-1">
-    <div class="ca-cta-area p-relative z-index-1">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-7 mb-30">
-                    <div class="ca-cta-content">
-                        <h2 class="ca-section-title cta-title-1 text-white fnw-700">Looking for a Reliable Supplier of Ethiopian Agricultural Products?</h2>
-                    </div>
-                </div>
-                <div class="col-lg-5 mb-30">
-                    <div class="ca-btn-cta-3 text-end">
-                        <a href="{% url 'pages:dynamic_pages' template_name='contact' %}"
-                            class="ca-btn-primary-3 w-bg br-50">Request a Quote <span><i
-                                    class="fa-solid fa-angle-right"></i></span></a>
-                    </div>
-                </div>
+<footer class="theme-bg-3 p-relative z-index-1" style="padding-top:60px;">
+    <!-- Footer Content -->
+    <div class="container" style="padding-bottom:40px;">
+        <div style="display:flex;flex-wrap:wrap;gap:40px 60px;">
+            <!-- Column 1: Brand -->
+            <div style="flex:1;min-width:250px;">
+                <a href="{% url 'pages:dashboard' %}"><img src="{% static 'images/logo/emmaus-logo.jpeg' %}" alt="Emmaus Import Export" style="height:50px;border-radius:4px;"></a>
+                <p style="color:rgba(255,255,255,0.7);margin-top:16px;line-height:1.7;max-width:320px;">Connecting Ethiopia's Finest Agricultural Products to the World. Quality, Integrity, Reliability.</p>
             </div>
-            <div class="b-bottom pt-48"></div>
+            <!-- Column 2: Quick Links -->
+            <div style="min-width:160px;">
+                <h4 style="color:#fff;font-weight:700;margin-bottom:20px;font-size:18px;">Quick Links</h4>
+                <ul style="list-style:none;padding:0;margin:0;">
+                    <li style="margin-bottom:12px;"><a href="{% url 'pages:dashboard' %}" style="color:rgba(255,255,255,0.7);transition:.3s;">Home</a></li>
+                    <li style="margin-bottom:12px;"><a href="{% url 'pages:dynamic_pages' template_name='about' %}" style="color:rgba(255,255,255,0.7);transition:.3s;">About Us</a></li>
+                    <li style="margin-bottom:12px;"><a href="{% url 'pages:dynamic_pages' template_name='products' %}" style="color:rgba(255,255,255,0.7);transition:.3s;">Export Products</a></li>
+                    <li style="margin-bottom:12px;"><a href="{% url 'pages:dynamic_pages' template_name='imports' %}" style="color:rgba(255,255,255,0.7);transition:.3s;">Import Solutions</a></li>
+                    <li style="margin-bottom:12px;"><a href="{% url 'pages:dynamic_pages' template_name='contact' %}" style="color:rgba(255,255,255,0.7);transition:.3s;">Contact Us</a></li>
+                    <li><a href="https://iqfortune.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.7);transition:.3s;">IQ Fortune</a></li>
+                </ul>
+            </div>
+            <!-- Column 3: Contact Info -->
+            <div style="min-width:260px;">
+                <h4 style="color:#fff;font-weight:700;margin-bottom:20px;font-size:18px;">Contact Info</h4>
+                <ul style="list-style:none;padding:0;margin:0;">
+                    <li style="margin-bottom:14px;display:flex;align-items:flex-start;color:rgba(255,255,255,0.7);">
+                        <i class="fa-solid fa-location-dot" style="color:rgba(255,255,255,0.5);margin-right:12px;margin-top:4px;width:14px;text-align:center;flex-shrink:0;"></i>
+                        Lemi Kura Sub-city, Woreda 08, Addis Ababa, Ethiopia
+                    </li>
+                    <li style="margin-bottom:14px;display:flex;align-items:center;color:rgba(255,255,255,0.7);">
+                        <i class="fa-solid fa-phone" style="color:rgba(255,255,255,0.5);margin-right:12px;width:14px;text-align:center;flex-shrink:0;"></i>
+                        <a href="tel:+251911192862" style="color:rgba(255,255,255,0.7);">+251 91 1192862</a>
+                    </li>
+                    <li style="margin-bottom:14px;display:flex;align-items:center;color:rgba(255,255,255,0.7);">
+                        <i class="fa-solid fa-envelope" style="color:rgba(255,255,255,0.5);margin-right:12px;width:14px;text-align:center;flex-shrink:0;"></i>
+                        <a href="mailto:info@emmausimportexport.com" style="color:rgba(255,255,255,0.7);">info@emmausimportexport.com</a>
+                    </li>
+                    <li style="display:flex;align-items:flex-start;color:rgba(255,255,255,0.7);">
+                        <i class="fa-solid fa-clock" style="color:rgba(255,255,255,0.5);margin-right:12px;margin-top:4px;width:14px;text-align:center;flex-shrink:0;"></i>
+                        <span>Mon - Fri: 8:30 AM - 5:30 PM (EAT)<br>Sat: 8:30 AM - 12:30 PM</span>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-    <div class="ca-footer-area">
-        <div class="container">
-            <div class="ca-ft-area w-bg">
-                <div class="row">
-                    <div class="col-xl-4 col-md-6 mb-30">
-                        <div class="ca-footer widget-1">
-                            <div class="ca-ft-logo">
-                                <a href="{% url 'pages:dashboard' %}" style="font-size:24px;font-weight:700;color:#1a5279;text-decoration:none;letter-spacing:2px;">EMMAUS</a>
-                            </div>
-                            <div class="ca-ft-content ca-ft-content-3 mb-24">
-                                <p class="pt-16">Connecting Ethiopia's Finest Agricultural Products to the World. Quality, Integrity, Reliability.</p>
-                            </div>
-                            <div class="ca-footer-social ca-footer-social-3">
-                                <ul>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 mb-30">
-                        <div class="ca-footer widget-2">
-                            <h4 class="ca-title fnw-700 theme-black-3 pb-24">Quick Links</h4>
-                            <div class="ca-footer-menu ca-footer-menu-3">
-                                <ul>
-                                    <li><a href="{% url 'pages:dashboard' %}">Home</a></li>
-                                    <li><a href="{% url 'pages:dynamic_pages' template_name='about' %}">About Us</a></li>
-                                    <li><a href="{% url 'pages:dynamic_pages' template_name='products' %}">Export Products</a></li>
-                                    <li><a href="{% url 'pages:dynamic_pages' template_name='imports' %}">Import Solutions</a></li>
-                                    <li><a href="{% url 'pages:dynamic_pages' template_name='contact' %}">Contact Us</a></li>
-                                    <li><a href="https://iqfortune.com" target="_blank" rel="noopener">IQ Fortune</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 mb-30">
-                        <div class="ca-footer widget-4">
-                            <h4 class="ca-title fnw-700 theme-black-3 pb-24">Contact Info</h4>
-                            <div class="ca-ft-content">
-                                <p class="pb-12"><i class="fa-solid fa-location-dot" style="color:#1a5279;margin-right:8px;"></i> Lemi Kura Sub-city, Woreda 08, Addis Ababa, Ethiopia</p>
-                                <p class="pb-12"><i class="fa-solid fa-phone" style="color:#1a5279;margin-right:8px;"></i> <a href="tel:+251911192862" style="color:inherit;">+251 91 1192862</a></p>
-                                <p class="pb-12"><i class="fa-solid fa-envelope" style="color:#1a5279;margin-right:8px;"></i> <a href="mailto:info@emmausimportexport.com" style="color:inherit;">info@emmausimportexport.com</a></p>
-                                <p><i class="fa-solid fa-clock" style="color:#1a5279;margin-right:8px;"></i> Mon - Fri: 8:30 AM - 5:30 PM (EAT)<br><span style="margin-left:24px;">Sat: 8:30 AM - 12:30 PM</span></p>
-                            </div>
-                        </div>
-                    </div>
+
+    <!-- Copyright -->
+    <div style="border-top:1px solid rgba(255,255,255,0.1);">
+        <div class="container" style="padding:20px 0;">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p style="color:rgba(255,255,255,0.5);margin:0;font-size:14px;">Copyright &COPY; 2026 Emmaus Import Export PLC. All Rights Reserved</p>
                 </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="copy-right-border border-1"></div>
-                    </div>
-                    <div class="col-lg-6">
-                        <p class="copry-right-text pt-24">Copyright &COPY; 2026 Emmaus Import Export PLC. All Rights Reserved</p>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="copy-right-menu pt-24">
-                            <ul>
-                                <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" style="color:rgba(255,255,255,0.5);font-size:14px;margin-left:20px;">Terms & Conditions</a>
+                    <a href="#" style="color:rgba(255,255,255,0.5);font-size:14px;margin-left:20px;">Privacy Policy</a>
                 </div>
             </div>
         </div>
