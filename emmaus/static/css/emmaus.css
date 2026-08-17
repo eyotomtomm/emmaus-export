@@ -1,28 +1,29 @@
 /* Emmaus Import Export PLC - Custom Theme Colors
-   Primary: #1a5279 (Deep Blue from logo)
-   Secondary: #2d3037 (Dark Charcoal from logo)
-   Accent: #1e6b3a (Green for agriculture)
+   Primary Navy: #11294a (from logo)
+   Secondary Dark: #1a1e2a (from logo)
+   Gold Accent: #a18147 (from logo)
+   Light Gold BG: #f0ece3
 */
 
 /* Override theme color 3 (primary accent) */
 .theme-color-3 {
-    color: #1a5279;
+    color: #11294a;
 }
 .theme-bg-3 {
-    background: #1a5279;
+    background: #11294a;
 }
 
 /* Override dark backgrounds */
 .theme-black-bg-3 {
-    background: #2d3037;
+    background: #1a1e2a;
 }
 .theme-black-3 {
-    color: #2d3037;
+    color: #1a1e2a;
 }
 
 /* Subtitle backgrounds */
 .subtitle-bg-6 {
-    background: #e8f0f7;
+    background: #f0ece3;
 }
 .subtitle-bg-7 {
     background: #1f2630;
@@ -30,16 +31,16 @@
 
 /* Buttons */
 .ca-btn-primary-3.theme-bg-3 {
-    background: #1a5279;
+    background: #11294a;
 }
 .ca-btn-primary-3.theme-bg-3:hover {
-    background: #144263;
+    background: #0d1f38;
 }
 
 /* Header sticky */
 .header-area-3.stiky.active {
     background: #ffffff;
-    box-shadow: 0 2px 20px rgba(26, 82, 121, 0.1);
+    box-shadow: 0 2px 20px rgba(17, 41, 74, 0.1);
 }
 
 /* Mobile header: show Request Quote + hamburger as flex row */
@@ -51,7 +52,7 @@
 
 /* Footer override */
 footer.theme-bg-3 {
-    background: #2d3037;
+    background: #1a1e2a;
 }
 footer .ca-ft-area {
     padding: 48px 40px 28px;
@@ -66,20 +67,20 @@ footer .ca-footer.widget-4 .ca-ft-content p {
     overflow-wrap: break-word;
 }
 footer .ca-footer-social-3 ul li a {
-    background: #e8f0f7;
-    color: #1a5279;
+    background: #f0ece3;
+    color: #11294a;
 }
 footer .ca-footer-social-3 ul li a:hover {
-    background: #1a5279;
+    background: #11294a;
     color: #fff;
 }
 footer .ca-footer-menu-3 ul li a:hover {
-    color: #1a5279;
+    color: #11294a;
 }
 
 /* Hero section */
 .emmaus-hero {
-    background: linear-gradient(135deg, #1a5279 0%, #2d3037 100%);
+    background: linear-gradient(135deg, #11294a 0%, #1a1e2a 100%);
     padding: 140px 0 100px;
     position: relative;
     overflow: hidden;
@@ -135,7 +136,7 @@ footer .ca-footer-menu-3 ul li a:hover {
 }
 .emmaus-product-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(26, 82, 121, 0.15);
+    box-shadow: 0 8px 30px rgba(17, 41, 74, 0.15);
 }
 .emmaus-product-card .product-img {
     height: 220px;
@@ -158,7 +159,7 @@ footer .ca-footer-menu-3 ul li a:hover {
     padding: 24px;
 }
 .emmaus-product-card .product-content h4 {
-    color: #2d3037;
+    color: #1a1e2a;
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 12px;
@@ -189,15 +190,15 @@ footer .ca-footer-menu-3 ul li a:hover {
     background: #f8f9fa;
 }
 .emmaus-section-title {
-    color: #2d3037;
+    color: #1a1e2a;
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 16px;
 }
 .emmaus-section-subtitle {
     display: inline-block;
-    background: #e8f0f7;
-    color: #1a5279;
+    background: #f0ece3;
+    color: #a18147;
     padding: 6px 18px;
     border-radius: 50px;
     font-size: 14px;
@@ -214,7 +215,7 @@ footer .ca-footer-menu-3 ul li a:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
     transition: transform 0.3s ease;
     margin-bottom: 30px;
-    border-top: 3px solid #1a5279;
+    border-top: 3px solid #11294a;
 }
 .emmaus-value-card:hover {
     transform: translateY(-3px);
@@ -222,17 +223,17 @@ footer .ca-footer-menu-3 ul li a:hover {
 .emmaus-value-card .value-icon {
     width: 60px;
     height: 60px;
-    background: #e8f0f7;
+    background: #f0ece3;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 16px;
-    color: #1a5279;
+    color: #11294a;
     font-size: 24px;
 }
 .emmaus-value-card h4 {
-    color: #2d3037;
+    color: #1a1e2a;
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 10px;
@@ -250,7 +251,7 @@ footer .ca-footer-menu-3 ul li a:hover {
     padding: 40px 30px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
     margin-bottom: 30px;
-    border-left: 4px solid #1a5279;
+    border-left: 4px solid #11294a;
     transition: transform 0.3s ease;
 }
 .emmaus-import-card:hover {
@@ -261,7 +262,7 @@ footer .ca-footer-menu-3 ul li a:hover {
     margin-bottom: 20px;
 }
 .emmaus-import-card h4 {
-    color: #2d3037;
+    color: #1a1e2a;
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 16px;
@@ -282,13 +283,13 @@ footer .ca-footer-menu-3 ul li a:hover {
     font-weight: 900;
     position: absolute;
     left: 0;
-    color: #1a5279;
+    color: #11294a;
     font-size: 12px;
 }
 
 /* Contact info */
 .emmaus-contact-info {
-    background: #1a5279;
+    background: #11294a;
     border-radius: 12px;
     padding: 40px;
     color: #ffffff;
@@ -305,8 +306,8 @@ footer .ca-footer-menu-3 ul li a:hover {
 /* Markets section */
 .emmaus-market-badge {
     display: inline-block;
-    background: #e8f0f7;
-    color: #1a5279;
+    background: #f0ece3;
+    color: #11294a;
     padding: 10px 24px;
     border-radius: 50px;
     font-size: 15px;
@@ -315,13 +316,13 @@ footer .ca-footer-menu-3 ul li a:hover {
     transition: all 0.3s ease;
 }
 .emmaus-market-badge:hover {
-    background: #1a5279;
+    background: #11294a;
     color: #ffffff;
 }
 
 /* Breadcrumb */
 .emmaus-breadcrumb {
-    background: linear-gradient(135deg, #1a5279 0%, #2d3037 100%);
+    background: linear-gradient(135deg, #11294a 0%, #1a1e2a 100%);
     padding: 180px 0 60px;
     text-align: center;
 }
@@ -336,7 +337,7 @@ footer .ca-footer-menu-3 ul li a:hover {
 
 /* Stats counter */
 .emmaus-stats {
-    background: #2d3037;
+    background: #1a1e2a;
     padding: 60px 0;
 }
 .emmaus-stat-item {
