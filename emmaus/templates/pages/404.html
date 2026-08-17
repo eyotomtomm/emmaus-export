@@ -2,130 +2,24 @@
 
 {% load static %}
 
-{% block title %}Cargon-404{% endblock title %}
+{% block title %}Emmaus Import Export - Page Not Found{% endblock title %}
 
 {% block page_content %}
 
-<!-- offcanvas start -->
-<div class="ca-offcanvas w-bg">
-   <div class="ca-offcanvas-wrapper">
-      <div class="ca-offcanvas-header d-flex justify-content-between align-items-center mb-40">
-         <div class="ca-offcanvas-logo">
-            <a href="#"><img src="{% static '/img/logo/ca-logo3.1.png' %}" alt=""></a>
-         </div>
-         <div class="ca-offcanvas-close">
-            <button class="ca-offcanvas-close-toggle"><i class="fal fa-times"></i></button>
-         </div>
-      </div>
-      <div class="ca-offcanvas-menu-3 mb-40">
-         <nav>
-         </nav>
-      </div>
-      <div class="ca-offcanvas-contact mb-40">
-         <a href="#" class="ca-btn-primary-3 theme-bg-3 text-white br-50">Get A Quote <span><i
-                  class="fa-solid fa-angle-right"></i></span></a>
-      </div>
-      <div class="ca-offcanvas-contact-info mb-40">
-         <h3 class="ca-offcanvas-sm-title">Contact Info</h3>
-         <!-- single item -->
-         <div class="ca-sm-single-item-4 ca-sm-single-item-1 mb-20">
-            <div class="icon">
-               <span>
-                  <i class="fa-solid fa-location-dot"></i>
-               </span>
-            </div>
-            <div class="ca-sm-single-item-4-content">
-               <p><a href="#">55 Street, 2nd block, 3rd Floor
-                     Melbourne, Australia</a></p>
-            </div>
-         </div>
-
-         <!-- single item -->
-         <div class="ca-sm-single-item-4 ca-sm-single-item-1 mb-20">
-            <div class="icon">
-               <span>
-                  <i class="fa-solid fa-phone"></i>
-               </span>
-            </div>
-            <div class="ca-sm-single-item-4-content">
-               <p><a href="tel:+0221234568806">+022 (123) 456 88 06</a></p>
-            </div>
-         </div>
-
-         <!-- single item -->
-         <div class="ca-sm-single-item-4 ca-sm-single-item-1 mb-20">
-            <div class="icon">
-               <span>
-                  <i class="fa-solid fa-envelope"></i>
-               </span>
-            </div>
-            <div class="ca-sm-single-item-4-content">
-               <p><a href="mailto:infocargon@gmail.com">infocargon@gmail.com</a></p>
-            </div>
-         </div>
-      </div>
-      <div class="ca-offcanvas-social mb-40">
-         <h3 class="ca-offcanvas-sm-title">Follow Us</h3>
-         <div class="ca-footer-social ca-footer-social-3">
-            <ul>
-               <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-               <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-               <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-               <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-            </ul>
-         </div>
-      </div>
-   </div>
-</div>
-<div class="ca-offcanvas-overlay"></div>
-<!-- offcanvas end -->
-
 <main>
-   <!-- breadcrumb area start -->
-   <section class="ca-breadcrumb-area cream-bg-3 p-relative z-index-1 fix">
-      <div class="ca-breadcrumb-shape p-absolute bre-sh-1">
-         <img src="{% static '/img/shape/breadcrumn-shape.png' %}" alt="">
-      </div>
-      <div class="ca-breadcrumb-shape p-absolute bre-sh-2">
-         <img src="{% static '/img/shape/ca-line-shape.png' %}" alt="">
-      </div>
+   <section style="padding:150px 0 100px;text-align:center;">
       <div class="container">
-         <div class="ca-breadcrumb-content text-center">
-            <h2 class="ca-breadcrumb-title fnw-600">404 Error</h2>
-            <div class="it-breadcum-link">
-               <a href="{% url 'pages:dynamic_pages' template_name='index' %}">Home</a>
-               <span><i class="fa-solid fa-angle-right"></i></span>
-               <a class="active" href="{% url 'pages:dynamic_pages' template_name='404' %}">404 Error</a>
+         <div class="row justify-content-center">
+            <div class="col-lg-6">
+               <img src="{% static 'images/logo/emmaus-logo.png' %}" alt="Emmaus Import Export" style="height:120px;margin-bottom:40px;">
+               <h1 style="font-size:80px;font-weight:700;color:#1a5279;margin-bottom:10px;">404</h1>
+               <h2 class="emmaus-section-title" style="margin-bottom:16px;">Page Not Found</h2>
+               <p style="color:#5a5d63;font-size:17px;margin-bottom:32px;">Sorry, the page you are looking for doesn't exist or has been moved.</p>
+               <a href="{% url 'pages:dashboard' %}" class="ca-btn-primary-3 theme-bg-3 text-white br-50">Take Me Home <span><i class="fa-solid fa-angle-right"></i></span></a>
             </div>
          </div>
       </div>
    </section>
-   <!-- breadcrumb area end -->
-
-   <!-- 404 start -->
-   <section class="ca-eror pt-100 pb-70">
-      <div class="container">
-         <div class="row">
-            <div class="col-lg-8 text-center mx-auto mb-30">
-               <div class="ca-eror-content">
-                  <div class="ca-eror-img mb-60">
-                     <img class="w-100" src="{% static '/img/blog/ca-eror.png' %}" alt="">
-                  </div>
-                  <div class="ca-eror-heading">
-                     <h2 class="ca-section-title theme-black-3 fnw-600"> Sorry, Page Not Found!</h2>
-                     <p class="pt-16 pb-24">Sorry, the page you are looking for doesn’t exist or has<br> been moved.
-                        Here are some helpful links.</p>
-                     <div class="ca-eror-btn">
-                        <a href="{% url 'pages:dynamic_pages' template_name='index' %}" class="ca-btn-primary-3 theme-bg-3 text-white br-50">Take Me Home <span><i
-                                 class="fa-solid fa-angle-right"></i></span></a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
-   <!-- 404 end -->
 </main>
 
 {% endblock page_content %}

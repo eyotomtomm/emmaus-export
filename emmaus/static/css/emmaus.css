@@ -42,6 +42,13 @@
     box-shadow: 0 2px 20px rgba(26, 82, 121, 0.1);
 }
 
+/* Mobile header: show Request Quote + hamburger as flex row */
+@media (max-width: 991px) {
+    .ca-header-action-item.d-lg-none {
+        display: flex !important;
+    }
+}
+
 /* Footer override */
 footer.theme-bg-3 {
     background: #2d3037;
@@ -138,11 +145,14 @@ footer .ca-footer-menu-3 ul li a:hover {
     justify-content: center;
     background: #f8f9fa;
     padding: 20px;
+    font-size: 0;
+    color: transparent;
 }
 .emmaus-product-card .product-img img {
     max-height: 100%;
     max-width: 100%;
     object-fit: contain;
+    font-size: 0;
 }
 .emmaus-product-card .product-content {
     padding: 24px;
