@@ -1,60 +1,66 @@
 {% load static %}
-<footer class="theme-bg-3 p-relative z-index-1" style="padding-top:60px;">
-    <!-- Footer Content -->
-    <div class="container" style="padding-bottom:40px;">
-        <div style="display:flex;flex-wrap:wrap;gap:40px 60px;">
-            <!-- Column 1: Brand -->
-            <div style="flex:1;min-width:250px;">
-                <a href="{% url 'pages:dashboard' %}"><img src="{% static 'images/logo/emmaus-logo-white.png' %}" alt="Emmaus Import Export" style="height:80px;"></a>
-                <p style="color:rgba(255,255,255,0.7);margin-top:16px;line-height:1.7;max-width:320px;">Connecting Ethiopia's Finest Agricultural Products to the World. Quality, Integrity, Reliability.</p>
+<footer class="emmaus-footer">
+    <div class="container">
+        <div class="row">
+            <!-- Column 1: Brand + Social -->
+            <div class="col-lg-4 col-md-6 footer-col">
+                <a href="{% url 'pages:dashboard' %}" class="footer-logo">
+                    <img src="{% static 'images/logo/emmaus-logo-white.png' %}" alt="Emmaus Import Export">
+                </a>
+                <p class="footer-tagline">Connecting Ethiopia's Finest Agricultural Products to the World. Quality, Integrity, Reliability.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
             </div>
             <!-- Column 2: Quick Links -->
-            <div style="min-width:160px;">
-                <h4 style="color:#fff;font-weight:700;margin-bottom:20px;font-size:18px;">Quick Links</h4>
-                <ul style="list-style:none;padding:0;margin:0;">
-                    <li style="margin-bottom:12px;"><a href="{% url 'pages:dashboard' %}" style="color:rgba(255,255,255,0.7);transition:.3s;">Home</a></li>
-                    <li style="margin-bottom:12px;"><a href="{% url 'pages:dynamic_pages' template_name='about' %}" style="color:rgba(255,255,255,0.7);transition:.3s;">About Us</a></li>
-                    <li style="margin-bottom:12px;"><a href="{% url 'pages:dynamic_pages' template_name='products' %}" style="color:rgba(255,255,255,0.7);transition:.3s;">Export Products</a></li>
-                    <li style="margin-bottom:12px;"><a href="{% url 'pages:dynamic_pages' template_name='imports' %}" style="color:rgba(255,255,255,0.7);transition:.3s;">Import Solutions</a></li>
-                    <li style="margin-bottom:12px;"><a href="{% url 'pages:dynamic_pages' template_name='contact' %}" style="color:rgba(255,255,255,0.7);transition:.3s;">Contact Us</a></li>
-                    <li><a href="https://iqfortune.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.7);transition:.3s;">IQ Fortune</a></li>
+            <div class="col-lg-4 col-md-6 footer-col">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><i class="fa-solid fa-chevron-right"></i><a href="{% url 'pages:dashboard' %}">Home</a></li>
+                    <li><i class="fa-solid fa-chevron-right"></i><a href="{% url 'pages:dynamic_pages' template_name='about' %}">About Us</a></li>
+                    <li><i class="fa-solid fa-chevron-right"></i><a href="{% url 'pages:dynamic_pages' template_name='products' %}">Export Products</a></li>
+                    <li><i class="fa-solid fa-chevron-right"></i><a href="{% url 'pages:dynamic_pages' template_name='imports' %}">Import Solutions</a></li>
+                    <li><i class="fa-solid fa-chevron-right"></i><a href="{% url 'pages:dynamic_pages' template_name='contact' %}">Contact Us</a></li>
+                    <li><i class="fa-solid fa-chevron-right"></i><a href="https://iqfortune.com" target="_blank" rel="noopener">IQ Fortune</a></li>
                 </ul>
             </div>
             <!-- Column 3: Contact Info -->
-            <div style="min-width:260px;">
-                <h4 style="color:#fff;font-weight:700;margin-bottom:20px;font-size:18px;">Contact Info</h4>
-                <ul style="list-style:none;padding:0;margin:0;">
-                    <li style="margin-bottom:14px;display:flex;align-items:flex-start;color:rgba(255,255,255,0.7);">
-                        <i class="fa-solid fa-location-dot" style="color:rgba(255,255,255,0.5);margin-right:12px;margin-top:4px;width:14px;text-align:center;flex-shrink:0;"></i>
-                        Lemi Kura Sub-city, Woreda 08, Addis Ababa, Ethiopia
+            <div class="col-lg-4 col-md-12 footer-col">
+                <h4 class="footer-heading">Contact Info</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Lemi Kura Sub-city, Woreda 08, Addis Ababa, Ethiopia</span>
                     </li>
-                    <li style="margin-bottom:14px;display:flex;align-items:center;color:rgba(255,255,255,0.7);">
-                        <i class="fa-solid fa-phone" style="color:rgba(255,255,255,0.5);margin-right:12px;width:14px;text-align:center;flex-shrink:0;"></i>
-                        <a href="tel:+251911192862" style="color:rgba(255,255,255,0.7);">+251 91 1192862</a>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+251911192862">+251 91 1192862</a>
                     </li>
-                    <li style="margin-bottom:14px;display:flex;align-items:center;color:rgba(255,255,255,0.7);">
-                        <i class="fa-solid fa-envelope" style="color:rgba(255,255,255,0.5);margin-right:12px;width:14px;text-align:center;flex-shrink:0;"></i>
-                        <a href="mailto:info@emmausimportexport.com" style="color:rgba(255,255,255,0.7);">info@emmausimportexport.com</a>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:info@emmausimportexport.com">info@emmausimportexport.com</a>
                     </li>
-                    <li style="display:flex;align-items:flex-start;color:rgba(255,255,255,0.7);">
-                        <i class="fa-solid fa-clock" style="color:rgba(255,255,255,0.5);margin-right:12px;margin-top:4px;width:14px;text-align:center;flex-shrink:0;"></i>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
                         <span>Mon - Fri: 8:30 AM - 5:30 PM (EAT)<br>Sat: 8:30 AM - 12:30 PM</span>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
-
-    <!-- Copyright -->
-    <div style="border-top:1px solid rgba(255,255,255,0.1);">
-        <div class="container" style="padding:20px 0;">
+    <!-- Copyright Bar -->
+    <div class="footer-bottom">
+        <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 text-center text-md-start">
-                    <p style="color:rgba(255,255,255,0.5);margin:0;font-size:14px;">Copyright &COPY; 2026 Emmaus Import Export PLC. All Rights Reserved</p>
+                    <p>Copyright &copy; 2026 Emmaus Import Export PLC. All Rights Reserved</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <a href="#" style="color:rgba(255,255,255,0.5);font-size:14px;margin-left:20px;">Terms & Conditions</a>
-                    <a href="#" style="color:rgba(255,255,255,0.5);font-size:14px;margin-left:20px;">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
                 </div>
             </div>
         </div>
