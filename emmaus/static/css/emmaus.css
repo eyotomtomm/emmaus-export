@@ -1128,3 +1128,244 @@
     display: block;
     padding: 10px 0;
 }
+
+/* ============================================
+   DESIGN PASS (Aug 2026) — rhythm, proportion, footer
+   ============================================ */
+
+/* --- Vertical rhythm: one spacing system for every section ------------ */
+.emmaus-section {
+    padding: clamp(48px, 5.5vw, 80px) 0;
+}
+.emmaus-section .text-center.mb-60 {
+    margin-bottom: clamp(28px, 3vw, 44px) !important;
+}
+.emmaus-section .text-center.mb-60 p {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.emmaus-section .text-center.mb-60 .emmaus-section-title {
+    margin-bottom: 10px;
+}
+/* card grids: gutters instead of trailing margins, so top/bottom padding match */
+.emmaus-section > .container > .row {
+    --bs-gutter-y: 24px;
+}
+.emmaus-section > .container > .row > [class*="col-"] {
+    margin-bottom: 0 !important;
+}
+.emmaus-section > .container > .row > [class*="col-"] > .emmaus-product-card,
+.emmaus-section > .container > .row > [class*="col-"] > .emmaus-value-card,
+.emmaus-section > .container > .row > [class*="col-"] > .emmaus-import-card {
+    margin-bottom: 0;
+    height: 100%;
+}
+.emmaus-section .text-center.pt-30 {
+    padding-top: 36px;
+}
+
+/* --- Stats bar: sized for one line of numbers ------------------------- */
+.emmaus-stats {
+    padding: clamp(24px, 3vw, 40px) 0;
+}
+.emmaus-stat-item {
+    padding: 8px 12px;
+}
+.emmaus-stat-item h3 {
+    margin: 0;
+    line-height: 1.1;
+}
+.emmaus-stat-item p {
+    margin-top: 6px;
+}
+
+/* --- Page banners: tighter, larger title --------------------------------- */
+.emmaus-breadcrumb {
+    padding-top: calc(var(--emmaus-header-h) + 40px);
+    padding-bottom: clamp(40px, 4vw, 56px);
+}
+.emmaus-breadcrumb h2 {
+    font-size: clamp(28px, 3vw, 42px);
+    margin-bottom: 4px;
+}
+.emmaus-breadcrumb::after {
+    height: clamp(40px, 5vw, 70px);
+}
+
+/* --- Two-column media sections: image sized to the copy ----------------- */
+.emmaus-section > .container > .row.align-items-center img.w-100,
+.emmaus-section > .container > .row.align-items-center .p-relative img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    max-height: 460px;
+    object-fit: cover;
+    margin-bottom: 0;
+}
+
+/* --- Mission/Vision: icon beside copy ----------------------------------- */
+.emmaus-mv-card {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    column-gap: 20px;
+    align-items: start;
+    text-align: left;
+}
+.emmaus-mv-card .value-icon {
+    grid-row: 1 / span 2;
+    margin: 0 !important;
+}
+.emmaus-mv-card h4,
+.emmaus-mv-card p {
+    grid-column: 2;
+}
+.emmaus-mv-card h4 {
+    font-size: 20px !important;
+    margin-top: 4px;
+}
+.emmaus-mv-card h4 {
+    margin-bottom: 8px;
+}
+
+/* --- Markets badges: five fit on one row --------------------------------- */
+.emmaus-market-badge {
+    padding: 8px 16px;
+    font-size: 14px;
+    margin: 0 8px 8px 0;
+}
+.text-center .emmaus-market-badge {
+    margin: 0 4px 8px;
+}
+
+/* --- Contact form gets a surface on white sections ----------------------- */
+.emmaus-section:not(.emmaus-section-gray) .ca-contact-from.ca-contact-from-3 {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 32px;
+}
+.ca-contact-from-3 input,
+.ca-contact-from-3 textarea,
+.ca-contact-from-3 .nice-select {
+    background: #ffffff !important;
+}
+.emmaus-section .ca-contact-title-2 {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+@media (max-width: 767px) {
+    .emmaus-section:not(.emmaus-section-gray) .ca-contact-from.ca-contact-from-3 {
+        padding: 20px;
+    }
+}
+
+/* --- Product cards: copy flows from the top, specs read as key / value --- */
+.emmaus-product-card .product-content {
+    flex: 0 0 auto;
+    padding-bottom: 8px;
+}
+.emmaus-product-card .product-specs {
+    margin-top: 0;
+    padding-top: 8px;
+}
+.emmaus-product-card .product-specs li {
+    justify-content: flex-start;
+    text-align: left;
+    padding: 6px 0;
+}
+.emmaus-product-card .product-specs li strong {
+    flex: 0 0 44%;
+}
+@media (min-width: 768px) {
+    .emmaus-product-card .product-content h4 {
+        font-size: 18px;
+    }
+}
+
+/* --- Sister-company block ----------------------------------------------- */
+.emmaus-sister .emmaus-section-title {
+    margin-bottom: 8px;
+}
+.emmaus-sister p {
+    max-width: 640px;
+    margin: 0 auto 20px;
+}
+
+/* --- Footer: 4 columns, tighter type, readable bottom bar ------------------ */
+.emmaus-footer {
+    padding: clamp(48px, 5vw, 72px) 0 0;
+}
+.emmaus-footer .footer-grid {
+    --bs-gutter-y: 32px;
+}
+.emmaus-footer .footer-col {
+    margin-bottom: 0;
+}
+.emmaus-footer .footer-logo img {
+    height: 56px;
+    margin-bottom: 18px;
+}
+.emmaus-footer .footer-tagline {
+    font-size: 14.5px;
+    line-height: 1.7;
+    max-width: 340px;
+    margin-bottom: 22px;
+}
+.emmaus-footer .footer-heading {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+}
+.emmaus-footer .footer-heading::after {
+    width: 28px;
+}
+.emmaus-footer .footer-links li {
+    margin-bottom: 9px;
+}
+.emmaus-footer .footer-links li a {
+    font-size: 14.5px;
+    color: rgba(255, 255, 255, 0.72);
+}
+.emmaus-footer .footer-links li i {
+    font-size: 9px;
+    margin-right: 8px;
+}
+.emmaus-footer .footer-contact li {
+    margin-bottom: 12px;
+    font-size: 14.5px;
+    color: rgba(255, 255, 255, 0.72);
+}
+.emmaus-footer .footer-contact li a {
+    color: rgba(255, 255, 255, 0.72);
+}
+.emmaus-footer .footer-contact li i {
+    margin-top: 5px;
+}
+.footer-bottom {
+    margin-top: clamp(32px, 4vw, 48px);
+    padding: 18px 0;
+}
+.footer-bottom p,
+.footer-bottom a {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 13px;
+}
+.footer-bottom a:hover {
+    color: #a18147;
+}
+@media (max-width: 991px) {
+    .emmaus-footer .footer-brand {
+        margin-bottom: 8px;
+    }
+    .footer-bottom {
+        padding-bottom: 64px;
+    }
+}
+@media (max-width: 575px) {
+    .emmaus-footer .footer-col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

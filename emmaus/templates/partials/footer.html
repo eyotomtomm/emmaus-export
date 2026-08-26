@@ -1,35 +1,45 @@
 {% load static %}
 <footer class="emmaus-footer">
     <div class="container">
-        <div class="row">
-            <!-- Column 1: Brand + Social -->
-            <div class="col-lg-4 col-md-6 footer-col">
-                <a href="{% url 'pages:dashboard' %}" class="footer-logo">
+        <div class="row footer-grid">
+            <!-- Brand -->
+            <div class="col-lg-4 col-md-12 footer-col footer-brand">
+                <a href="{% url 'pages:dashboard' %}" class="footer-logo" aria-label="Emmaus Import Export - home">
                     <img src="{% static 'images/logo/emmaus-logo-white.png' %}" alt="Emmaus Import Export">
                 </a>
-                <p class="footer-tagline">Connecting Ethiopia's Finest Agricultural Products to the World. Quality, Integrity, Reliability.</p>
+                <p class="footer-tagline">Connecting Ethiopia's finest agricultural products to the world — with quality, integrity and reliability in every shipment.</p>
                 <div class="footer-social">
                     <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
                     <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
-            <!-- Column 2: Quick Links -->
-            <div class="col-lg-4 col-md-6 footer-col">
-                <h4 class="footer-heading">Quick Links</h4>
+            <!-- Company -->
+            <div class="col-lg-2 col-sm-4 col-6 footer-col">
+                <h4 class="footer-heading">Company</h4>
                 <ul class="footer-links">
                     <li><i class="fa-solid fa-chevron-right"></i><a href="{% url 'pages:dashboard' %}">Home</a></li>
                     <li><i class="fa-solid fa-chevron-right"></i><a href="{% url 'pages:dynamic_pages' template_name='about' %}">About Us</a></li>
-                    <li><i class="fa-solid fa-chevron-right"></i><a href="{% url 'pages:dynamic_pages' template_name='products' %}">Export Products</a></li>
                     <li><i class="fa-solid fa-chevron-right"></i><a href="{% url 'pages:dynamic_pages' template_name='imports' %}">Import Solutions</a></li>
+                    <li><i class="fa-solid fa-chevron-right"></i><a href="{% url 'pages:dynamic_pages' template_name='iq-fortune' %}">IQ Fortune</a></li>
                     <li><i class="fa-solid fa-chevron-right"></i><a href="{% url 'pages:dynamic_pages' template_name='contact' %}">Contact Us</a></li>
-                    <li><i class="fa-solid fa-chevron-right"></i><a href="https://iqfortune.com" target="_blank" rel="noopener">IQ Fortune</a></li>
                 </ul>
             </div>
-            <!-- Column 3: Contact Info -->
-            <div class="col-lg-4 col-md-12 footer-col">
-                <h4 class="footer-heading">Contact Info</h4>
+            <!-- Products -->
+            <div class="col-lg-3 col-sm-4 col-6 footer-col">
+                <h4 class="footer-heading">Export Products</h4>
+                <ul class="footer-links">
+                    <li><i class="fa-solid fa-chevron-right"></i><a href="{% url 'pages:dynamic_pages' template_name='products' %}#oilseeds">Oilseeds</a></li>
+                    <li><i class="fa-solid fa-chevron-right"></i><a href="{% url 'pages:dynamic_pages' template_name='products' %}#spices">Spices</a></li>
+                    <li><i class="fa-solid fa-chevron-right"></i><a href="{% url 'pages:dynamic_pages' template_name='products' %}#pulses">Pulses</a></li>
+                    <li><i class="fa-solid fa-chevron-right"></i><a href="{% url 'pages:dynamic_pages' template_name='products' %}#others">Frankincense, Myrrh &amp; Thyme</a></li>
+                    <li><i class="fa-solid fa-chevron-right"></i><a href="{% url 'pages:dynamic_pages' template_name='products' %}">All products</a></li>
+                </ul>
+            </div>
+            <!-- Contact -->
+            <div class="col-lg-3 col-sm-4 col-12 footer-col">
+                <h4 class="footer-heading">Contact</h4>
                 <ul class="footer-contact">
                     <li>
                         <i class="fa-solid fa-location-dot"></i>
@@ -45,7 +55,7 @@
                     </li>
                     <li>
                         <i class="fa-solid fa-clock"></i>
-                        <span>Mon - Fri: 8:30 AM - 5:30 PM (EAT)<br>Sat: 8:30 AM - 12:30 PM</span>
+                        <span>Mon – Fri 8:30 AM – 5:30 PM (EAT)<br>Sat 8:30 AM – 12:30 PM</span>
                     </li>
                 </ul>
             </div>
@@ -56,10 +66,10 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 text-center text-md-start">
-                    <p>Copyright &copy; 2026 Emmaus Import Export PLC. All Rights Reserved</p>
+                    <p>&copy; 2026 Emmaus Import Export PLC. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Terms &amp; Conditions</a>
                     <a href="#">Privacy Policy</a>
                 </div>
             </div>
