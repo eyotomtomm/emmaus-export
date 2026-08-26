@@ -6,7 +6,7 @@
             <div class="col-xl-2 col-6">
                 <!-- emmaus logo -->
                 <div class="ca-logo">
-                    <a href="{% url 'pages:dashboard' %}" aria-label="Emmaus Import Export - home"><img src="{% static 'images/logo/emmaus-logo.png' %}" alt="Emmaus Import Export" class="emmaus-logo-img"></a>
+                    <a href="{% url 'pages:dashboard' %}" aria-label="Emmaus Import Export - home"><img src="{% static 'images/logo/emmaus-logo.png' %}" alt="Emmaus Import Export" class="emmaus-logo-img emmaus-logo-img--dark"><img src="{% static 'images/logo/emmaus-logo-white.png' %}" alt="" aria-hidden="true" class="emmaus-logo-img emmaus-logo-img--light"></a>
                 </div>
             </div>
             <div class="col-xl-7 d-none d-xl-block">
@@ -31,8 +31,6 @@
                                 class="fa-solid fa-angle-right"></i></span></a>
                 </div>
                 <div class="ca-header-action-item d-xl-none">
-                    <a href="{% url 'pages:dynamic_pages' template_name='contact' %}#request-quote"
-                        class="ca-btn-primary-3 theme-bg-3 text-white br-50 emmaus-header-cta">Request Quote</a>
                     <button type="button" class="ca-offcanvas-toogle" aria-label="Open menu" aria-controls="emmaus-offcanvas" aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" viewBox="0 0 30 16" aria-hidden="true" focusable="false">
                             <rect x="10" width="20" height="2" fill="currentColor"></rect>

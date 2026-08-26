@@ -1369,3 +1369,70 @@
         max-width: 100%;
     }
 }
+
+/* ============================================
+   COMPACT HEADER (<1200px): no tray, just logo + hamburger
+   ============================================ */
+.emmaus-logo-img--light {
+    display: none;
+}
+@media (max-width: 1199px) {
+    /* transparent header over the hero / page banner (pages that have one) */
+    header.header-area-3:has(+ main > .emmaus-hero) .header-3,
+    header.header-area-3:has(+ main > .emmaus-breadcrumb) .header-3 {
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    header.header-area-3:has(+ main > .emmaus-hero):not(.scroll-header) .emmaus-logo-img--dark,
+    header.header-area-3:has(+ main > .emmaus-breadcrumb):not(.scroll-header) .emmaus-logo-img--dark {
+        display: none;
+    }
+    header.header-area-3:has(+ main > .emmaus-hero):not(.scroll-header) .emmaus-logo-img--light,
+    header.header-area-3:has(+ main > .emmaus-breadcrumb):not(.scroll-header) .emmaus-logo-img--light {
+        display: inline-block;
+    }
+    /* hamburger as a small white disc so it reads on any photo */
+    .header-3 .ca-offcanvas-toogle {
+        width: 44px;
+        height: 44px;
+        min-width: 0;
+        padding: 0;
+        border: 0;
+        border-radius: 50%;
+        background: #ffffff;
+        color: #11294a;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+    }
+    .header-3 .ca-offcanvas-toogle svg {
+        width: 22px;
+        height: 12px;
+    }
+    /* once scrolled, the fixed white bar returns with the dark logo */
+    header.header-area-3.scroll-header .header-3 {
+        background: #ffffff;
+    }
+    header.header-area-3.scroll-header .ca-offcanvas-toogle {
+        box-shadow: none;
+        background: #f0ece3;
+    }
+    /* pages without a banner (404) keep a plain white bar with a hairline */
+    header.header-area-3:not(:has(+ main > .emmaus-hero)):not(:has(+ main > .emmaus-breadcrumb)) .header-3 {
+        border-radius: 0;
+        box-shadow: none;
+        border-bottom: 1px solid #eceff3;
+    }
+}
+@media (max-width: 1199px) {
+    /* the theme pins a white bar below 992px; keep it transparent over the hero until scrolled */
+    header.header-area-3.stiky:not(.scroll-header):has(+ main > .emmaus-hero),
+    header.header-area-3.stiky:not(.scroll-header):has(+ main > .emmaus-breadcrumb) {
+        position: absolute;
+        background: transparent;
+        box-shadow: none;
+    }
+    header.header-area-3.stiky.scroll-header {
+        position: fixed;
+        background: #ffffff;
+    }
+}
