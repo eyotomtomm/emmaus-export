@@ -196,7 +196,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1920&q=80') center/cover no-repeat;
+    background: url('../images/banners/field-crops.jpg') center/cover no-repeat;
     opacity: 0.55;
 }
 .emmaus-hero .container {
@@ -679,4 +679,452 @@
     img.w-100 {
         margin-bottom: 20px;
     }
+}
+
+/* ============================================
+   RESPONSIVE FIX PASS (Aug 2026)
+   Header height is tracked in --emmaus-header-h so the hero,
+   page banners and anchor targets can clear it at every width.
+   ============================================ */
+:root {
+    --emmaus-header-h: 134px;   /* pill header: 24px offset + 110px bar */
+    --emmaus-sticky-h: 100px;   /* fixed header after scrolling */
+}
+@media (max-width: 1199px) {
+    :root {
+        --emmaus-header-h: 80px;
+        --emmaus-sticky-h: 80px;
+    }
+}
+
+/* --- Header: keep the desktop menu on one row ------------------------- */
+.ca-main-menu-3 ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+.ca-main-menu-3 ul li:hover > a,
+.ca-main-menu-3 ul li > a:focus-visible {
+    color: #a18147;
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .ca-main-menu-3 ul li > a {
+        padding: 0 10px;
+        font-size: 15px;
+    }
+}
+.emmaus-logo-img {
+    height: 70px;
+    width: auto;
+}
+.ca-btn-header .ca-btn-primary-3 {
+    white-space: nowrap;
+}
+
+/* --- Header below 1200px: compact bar, single-line CTA ---------------- */
+@media (max-width: 1199px) {
+    .emmaus-logo-img {
+        height: 48px;
+    }
+    header.header-area-3.stiky .header-3 {
+        padding: 16px 0;
+    }
+    .ca-header-action-item.d-xl-none {
+        display: flex !important;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+    .emmaus-header-cta {
+        white-space: nowrap;
+        font-size: 13px;
+        padding: 9px 16px;
+        line-height: 1;
+    }
+    .ca-offcanvas-toogle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 44px;
+        min-height: 40px;
+    }
+}
+@media (max-width: 400px) {
+    .emmaus-logo-img {
+        height: 42px;
+    }
+    .emmaus-header-cta {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
+
+/* --- Hero: clear the header, fill the fold, show the buttons ---------- */
+.emmaus-hero {
+    padding-top: calc(var(--emmaus-header-h) + 56px);
+    padding-bottom: clamp(60px, 7vw, 100px);
+    min-height: min(78vh, 760px);
+    display: flex;
+    align-items: center;
+}
+.emmaus-hero .container {
+    width: 100%;
+}
+.emmaus-hero h1,
+.emmaus-hero p {
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.35);
+}
+.emmaus-hero .hero3-btn {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    transition: none !important;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+}
+.emmaus-hero .hero3-btn a {
+    margin-left: 0;
+}
+.emmaus-hero .hero3-btn .ca-sec-primary-3 {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.08);
+    font-weight: 600;
+}
+.emmaus-hero .hero3-btn .ca-sec-primary-3 span {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    margin-left: 8px;
+}
+@media (max-width: 767px) {
+    .emmaus-hero {
+        min-height: 60vh;
+    }
+    .emmaus-hero .hero3-btn {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .emmaus-hero .hero3-btn a {
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+/* --- Page banners: clear the header ----------------------------------- */
+.emmaus-breadcrumb {
+    padding-top: calc(var(--emmaus-header-h) + 56px);
+    padding-bottom: clamp(50px, 5vw, 80px);
+}
+.emmaus-breadcrumb .it-breadcum-link a,
+.emmaus-breadcrumb .it-breadcum-link span {
+    font-size: 15px;
+}
+
+/* --- Anchor targets land below the fixed header ----------------------- */
+[id] {
+    scroll-margin-top: calc(var(--emmaus-sticky-h) + 24px);
+}
+
+/* --- Icon font: the bundled kit is Font Awesome 6 Pro ------------------ */
+.emmaus-import-card ul li::before {
+    font-family: "Font Awesome 6 Pro", "Font Awesome 6 Free";
+}
+
+/* --- Motion: one short reveal, none for reduced-motion users ---------- */
+[data-aos] {
+    transition-duration: 0.45s !important;
+    transition-delay: 0s !important;
+}
+@media (prefers-reduced-motion: reduce) {
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+    html {
+        scroll-behavior: auto !important;
+    }
+}
+
+/* --- Container overflow at 1200-1399px --------------------------------- */
+@media (max-width: 1399px) {
+    .ca-ab-content3 {
+        margin-left: 0;
+    }
+    .ca-form-loca-3.ml-50 {
+        margin-left: 0;
+    }
+}
+
+/* --- Checklist items: readable when they wrap -------------------------- */
+.ca-item-ch-title {
+    line-height: 1.35;
+}
+.ca-ab-sngle-item {
+    align-items: flex-start;
+}
+.ca-ab-sngle-item-ic span {
+    margin-top: 1px;
+    flex-shrink: 0;
+}
+.ca-ab-item-check {
+    gap: 0 16px;
+}
+@media (max-width: 575px) {
+    .ca-ab-item-check {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Equal-height cards ------------------------------------------------- */
+.row > [class*="col-"] > .emmaus-product-card,
+.row > [class*="col-"] > .emmaus-value-card,
+.row > [class*="col-"] > .emmaus-import-card {
+    height: calc(100% - 30px);
+}
+.emmaus-product-card {
+    display: flex;
+    flex-direction: column;
+}
+.emmaus-product-card .product-content {
+    flex: 1 1 auto;
+}
+.emmaus-product-card .product-specs {
+    margin-top: auto;
+}
+@media (max-width: 767px) {
+    .row > [class*="col-"] > .emmaus-value-card,
+    .row > [class*="col-"] > .emmaus-import-card {
+        height: calc(100% - 16px);
+    }
+}
+
+/* --- Product cards: uniform images, scannable specs -------------------- */
+.emmaus-product-card .product-img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+    padding: 0;
+    background: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+}
+.emmaus-product-card .product-img img {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
+}
+.emmaus-product-card .product-specs li {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+.emmaus-product-card .product-specs li strong {
+    flex: 0 0 auto;
+    text-align: left;
+    color: #1a1e2a;
+}
+@media (max-width: 767px) {
+    .emmaus-product-card {
+        margin-bottom: 16px;
+    }
+    .emmaus-product-card .product-content {
+        padding: 12px;
+    }
+    .emmaus-product-card .product-content h4 {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+    .emmaus-product-card .product-content p {
+        font-size: 12.5px;
+        line-height: 1.5;
+    }
+    .emmaus-product-card .product-specs {
+        padding: 0 12px 12px;
+    }
+    .emmaus-product-card .product-specs li {
+        font-size: 11.5px;
+        flex-direction: column;
+        gap: 0;
+        text-align: left;
+    }
+    .row > [class*="col-"] > .emmaus-product-card {
+        height: calc(100% - 16px);
+    }
+}
+
+/* --- Products: sticky category bar ------------------------------------- */
+.emmaus-cat-bar {
+    position: sticky;
+    top: var(--emmaus-sticky-h);
+    z-index: 8;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid #e8ebef;
+}
+.emmaus-cat-bar .container {
+    display: flex;
+    gap: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    justify-content: center;
+}
+.emmaus-cat-bar .container::-webkit-scrollbar {
+    display: none;
+}
+.emmaus-cat-bar a {
+    flex: 0 0 auto;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #11294a;
+    background: #f0ece3;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+.emmaus-cat-bar a:hover,
+.emmaus-cat-bar a:focus-visible {
+    background: #11294a;
+    color: #ffffff;
+}
+@media (max-width: 767px) {
+    .emmaus-cat-bar .container {
+        justify-content: flex-start;
+    }
+    .emmaus-cat-bar a {
+        font-size: 13px;
+        padding: 7px 14px;
+    }
+}
+
+/* --- Scroll-to-top button: keep it off the footer links --------------- */
+#topBtn3 {
+    right: 24px;
+    bottom: 24px;
+    background: #11294a;
+}
+@media (max-width: 991px) {
+    #topBtn3 {
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        right: 16px;
+        bottom: 16px;
+    }
+    .footer-bottom {
+        padding-bottom: 64px;
+    }
+}
+
+/* --- Forms: labels, validation, status --------------------------------- */
+.emmaus-field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a1e2a;
+    margin-bottom: 6px;
+}
+.emmaus-field label .req {
+    color: #b42318;
+}
+.was-validated :invalid {
+    border-color: #b42318 !important;
+}
+.form-status {
+    margin-top: 14px;
+    font-size: 14px;
+    border-radius: 6px;
+    padding: 0;
+}
+.form-status.is-success {
+    background: #e9f3ea;
+    color: #1e5631;
+    padding: 12px 14px;
+}
+.form-status.is-error {
+    background: #fbe9e7;
+    color: #b42318;
+    padding: 12px 14px;
+}
+.ca-contact-from input::placeholder,
+.ca-contact-from textarea::placeholder {
+    text-transform: none;
+}
+
+/* --- Contact details ------------------------------------------------------ */
+.emmaus-lines {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.emmaus-lines li {
+    display: block;
+}
+.emmaus-contact-info a {
+    word-break: break-word;
+}
+.emmaus-value-card p a {
+    word-break: break-word;
+}
+
+/* --- IQ Fortune brand panel (no logo asset exists yet) ---------------- */
+.emmaus-brand-panel {
+    background: linear-gradient(135deg, #11294a 0%, #1a1e2a 100%);
+    border-radius: 12px;
+    padding: 56px 32px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+.emmaus-brand-panel .brand-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border: 2px solid #a18147;
+    color: #a18147;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin-bottom: 20px;
+}
+.emmaus-brand-panel .brand-name {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+.emmaus-brand-panel .brand-sub {
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* --- Hero / banner images are self-hosted ------------------------------ */
+.emmaus-hero::before {
+    background-image: url('../images/banners/field-crops.jpg');
+    opacity: 0.5;
+}
+
+/* --- Off-canvas menu extras -------------------------------------------- */
+.ca-offcanvas-cta .ca-btn-primary-3 {
+    display: inline-flex;
+    align-items: center;
+}
+.ca-offcanvas-menu-3 ul li a {
+    display: block;
+    padding: 10px 0;
 }

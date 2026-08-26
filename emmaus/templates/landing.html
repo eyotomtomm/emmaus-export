@@ -11,25 +11,28 @@
 {% include 'partials/preloader.html' %}
 
 <!-- offcanvas mobile menu -->
-<div class="ca-offcanvas w-bg">
+<div class="ca-offcanvas w-bg" id="emmaus-offcanvas" aria-label="Menu">
    <div class="ca-offcanvas-wrapper">
       <div class="ca-offcanvas-header d-flex justify-content-between align-items-center mb-40">
          <div class="ca-offcanvas-logo">
             <a href="{% url 'pages:dashboard' %}"><img src="{% static 'images/logo/emmaus-logo.png' %}" alt="Emmaus Import Export" style="height:60px;"></a>
          </div>
          <div class="ca-offcanvas-close">
-            <button class="ca-offcanvas-close-toggle"><i class="fal fa-times"></i></button>
+            <button class="ca-offcanvas-close-toggle" aria-label="Close menu"><i class="fal fa-times" aria-hidden="true"></i></button>
          </div>
       </div>
       <div class="ca-offcanvas-menu-3 mb-40">
-         <nav></nav>
+         <nav aria-label="Mobile"></nav>
+      </div>
+      <div class="ca-offcanvas-cta mb-40">
+         <a href="{% url 'pages:dynamic_pages' template_name='contact' %}#request-quote" class="ca-btn-primary-3 theme-bg-3 text-white br-50">Request Quote <span><i class="fa-solid fa-angle-right"></i></span></a>
       </div>
       <div class="ca-offcanvas-contact-info mb-40">
          <h3 class="ca-offcanvas-sm-title">Contact Info</h3>
          <div class="ca-sm-single-item-4 ca-sm-single-item-1 mb-20">
             <div class="icon"><span><i class="fa-solid fa-location-dot"></i></span></div>
             <div class="ca-sm-single-item-4-content">
-               <p>Lemi Kura Sub-city, Woreda 08, Addis Ababa, Ethiopia</p>
+               <p>Lemi Kura Sub-city, Woreda 08, RIM SEVEN Bldg., House No. 801, Addis Ababa, Ethiopia</p>
             </div>
          </div>
          <div class="ca-sm-single-item-4 ca-sm-single-item-1 mb-20">
@@ -55,6 +58,6 @@
 
 {% include 'partials/footer.html' %}
 
-<button id="topBtn3"><i class="fa-solid fa-arrow-up"></i></button>
+<button id="topBtn3" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
 
 {% endblock content %}

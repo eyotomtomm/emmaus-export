@@ -3,16 +3,16 @@
 <header class="header-area-3 stiky">
     <div class="container header-3">
         <div class="row align-items-center">
-            <div class="col-xl-3 col-6">
+            <div class="col-xl-2 col-6">
                 <!-- emmaus logo -->
                 <div class="ca-logo">
-                    <a href="{% url 'pages:dashboard' %}"><img src="{% static 'images/logo/emmaus-logo.png' %}" alt="Emmaus Import Export" style="height:70px;"></a>
+                    <a href="{% url 'pages:dashboard' %}" aria-label="Emmaus Import Export - home"><img src="{% static 'images/logo/emmaus-logo.png' %}" alt="Emmaus Import Export" class="emmaus-logo-img"></a>
                 </div>
             </div>
-            <div class="col-xl-6 d-none d-xl-block">
+            <div class="col-xl-7 d-none d-xl-block">
                 <!-- main menu -->
                 <div class="ca-main-menu-3">
-                    <nav class="ca-mobile-menu-active-3">
+                    <nav class="ca-mobile-menu-active-3" aria-label="Main">
                         <ul>
                             <li><a href="{% url 'pages:dashboard' %}">Home</a></li>
                             <li><a href="{% url 'pages:dynamic_pages' template_name='about' %}">About Us</a></li>
@@ -30,11 +30,11 @@
                         class="ca-btn-primary-3 theme-bg-3 text-white br-50">Request Quote <span><i
                                 class="fa-solid fa-angle-right"></i></span></a>
                 </div>
-                <div class="ca-header-action-item d-xl-none text-end" style="align-items:center;justify-content:flex-end;gap:12px;">
+                <div class="ca-header-action-item d-xl-none">
                     <a href="{% url 'pages:dynamic_pages' template_name='contact' %}#request-quote"
-                        class="ca-btn-primary-3 theme-bg-3 text-white br-50" style="font-size:13px;padding:8px 16px;">Request Quote</a>
-                    <button type="button" class="ca-offcanvas-toogle">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" viewBox="0 0 30 16">
+                        class="ca-btn-primary-3 theme-bg-3 text-white br-50 emmaus-header-cta">Request Quote</a>
+                    <button type="button" class="ca-offcanvas-toogle" aria-label="Open menu" aria-controls="emmaus-offcanvas" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" viewBox="0 0 30 16" aria-hidden="true" focusable="false">
                             <rect x="10" width="20" height="2" fill="currentColor"></rect>
                             <rect x="5" y="7" width="25" height="2" fill="currentColor"></rect>
                             <rect x="10" y="14" width="20" height="2" fill="currentColor"></rect>

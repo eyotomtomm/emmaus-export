@@ -83,9 +83,6 @@
 
 /* MD Device : 768px */
 @media (min-width:768px) and (max-width:991px){
-    br{
-        display: none;
-    }
     .ml-50 {
         margin-left: 0px;
     }
@@ -605,9 +602,6 @@
 
 /* Extra small Device */
 @media (max-width: 767px){
-    br{
-        display: none;
-    }
     .pb-70 {
         padding-bottom: 30px;
     }

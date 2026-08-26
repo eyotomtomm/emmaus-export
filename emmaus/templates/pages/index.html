@@ -31,19 +31,19 @@
          <div class="row">
             <div class="col-md-3 col-6">
                <div class="emmaus-stat-item">
-                  <h3><span class="counter">5</span>+</h3>
+                  <h3><span data-count="5">5</span>+</h3>
                   <p>Continents Served</p>
                </div>
             </div>
             <div class="col-md-3 col-6">
                <div class="emmaus-stat-item">
-                  <h3><span class="counter">15</span>+</h3>
+                  <h3><span data-count="15">15</span>+</h3>
                   <p>Product Lines</p>
                </div>
             </div>
             <div class="col-md-3 col-6">
                <div class="emmaus-stat-item">
-                  <h3><span class="counter">100</span>%</h3>
+                  <h3><span data-count="100">100</span>%</h3>
                   <p>Quality Inspected</p>
                </div>
             </div>
@@ -105,7 +105,7 @@
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/humera-sesame-seed.png' %}" alt="Sesame Seeds">
+                     <img src="{% static 'images/products/humera-sesame-seed.jpg' %}" alt="Sesame Seeds">
                   </div>
                   <div class="product-content">
                      <h4>Oilseeds</h4>
@@ -117,7 +117,7 @@
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1000">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/turmeric-finger.png' %}" alt="Turmeric">
+                     <img src="{% static 'images/products/turmeric-finger.jpg' %}" alt="Turmeric">
                   </div>
                   <div class="product-content">
                      <h4>Spices</h4>
@@ -151,7 +151,7 @@
             <span class="emmaus-section-subtitle">Why Emmaus</span>
             <h2 class="emmaus-section-title">Why Choose Emmaus Import Export PLC?</h2>
          </div>
-         <div class="row">
+         <div class="row justify-content-center">
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800">
                <div class="emmaus-value-card">
                   <div class="value-icon"><i class="fa-solid fa-award"></i></div>
@@ -215,7 +215,7 @@
                </div>
             </div>
             <div class="col-lg-6 mb-30">
-               <img class="w-100" style="border-radius:12px;" src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&q=80" alt="Global shipping">
+               <img class="w-100" style="border-radius:12px;" src="{% static 'images/banners/port-containers.jpg' %}" alt="Global shipping">
             </div>
          </div>
       </div>
@@ -236,22 +236,27 @@
                      <h4 class="ca-contact-title-2 theme-black-2 fnw-600">Request a Quote</h4>
                      <p class="pt-16 pb-24">Our team is ready to help you source premium Ethiopian products with confidence.</p>
                   </div>
-                  <form action="mailto:abel.isayas@emmausimportexport.com" method="post" enctype="text/plain">
+                  <form action="mailto:abel.isayas@emmausimportexport.com" method="post" enctype="text/plain" data-emmaus-form data-subject="Quote request (website)">
                      <div class="row">
-                        <div class="col-md-6 mb-20">
-                           <input type="text" placeholder="Full Name">
+                        <div class="col-md-6 mb-20 emmaus-field">
+                           <label for="hq-full_name">Full name <span class="req" aria-hidden="true">*</span></label>
+                           <input type="text" id="hq-full_name" name="full_name" placeholder="Full Name" autocomplete="name" required>
                         </div>
-                        <div class="col-md-6 mb-20">
-                           <input type="text" placeholder="Company Name">
+                        <div class="col-md-6 mb-20 emmaus-field">
+                           <label for="hq-company">Company name</label>
+                           <input type="text" id="hq-company" name="company" placeholder="Company Name" autocomplete="organization">
                         </div>
-                        <div class="col-md-6 mb-20">
-                           <input type="tel" placeholder="Phone Number">
+                        <div class="col-md-6 mb-20 emmaus-field">
+                           <label for="hq-phone">Phone number</label>
+                           <input type="tel" id="hq-phone" name="phone" placeholder="Phone Number" autocomplete="tel">
                         </div>
-                        <div class="col-md-6 mb-20">
-                           <input type="email" placeholder="Email Address">
+                        <div class="col-md-6 mb-20 emmaus-field">
+                           <label for="hq-email">Email address <span class="req" aria-hidden="true">*</span></label>
+                           <input type="email" id="hq-email" name="email" placeholder="Email Address" autocomplete="email" required>
                         </div>
-                        <div class="col-md-12 mb-20">
-                           <select class="nice-select wide ca-select">
+                        <div class="col-md-12 mb-20 emmaus-field">
+                           <label for="hq-product_interest">Product interest</label>
+                           <select class="nice-select wide ca-select" id="hq-product_interest" name="product_interest">
                               <option data-display="Product Interest">Select Product</option>
                               <option value="1">Oilseeds</option>
                               <option value="2">Spices</option>
@@ -260,14 +265,16 @@
                               <option value="5">Other</option>
                            </select>
                         </div>
-                        <div class="col-md-12 mb-20">
-                           <textarea name="message" id="message" placeholder="Tell us about your requirements..."></textarea>
+                        <div class="col-md-12 mb-20 emmaus-field">
+                           <label for="hq-message">Your requirements <span class="req" aria-hidden="true">*</span></label>
+                           <textarea name="message" id="hq-message" placeholder="Products, quantities, packaging and delivery timeline" rows="5" required></textarea>
                         </div>
                         <div class="submit-btn">
                            <button class="ca-btn-primary-3 theme-bg-3 text-white br-50" type="submit" value="submit">
                               Send Message <span><i class="fa-solid fa-angle-right"></i></span></button>
                         </div>
                      </div>
+                     <p class="form-status" role="status" aria-live="polite"></p>
                   </form>
                </div>
             </div>
@@ -280,7 +287,7 @@
                         </div>
                         <div class="ca-location-icbox-text">
                            <h4 class="ca-title fnw-600 theme-black-3 pb-12">Our Office</h4>
-                           <p>Lemi Kura Sub-city, Woreda 08, RIM SEVEN Bldg.<br>(In front of Civil Service College) House No. 801<br>Addis Ababa, Ethiopia</p>
+                           <p>Lemi Kura Sub-city, Woreda 08<br>RIM SEVEN Bldg. (in front of Civil Service College)<br>House No. 801, Addis Ababa, Ethiopia</p>
                         </div>
                      </div>
                   </div>
@@ -303,7 +310,7 @@
                         <div class="ca-location-icbox-text">
                            <h4 class="ca-title fnw-600 theme-black-3 pb-12">Email</h4>
                            <a href="mailto:info@emmausimportexport.com">info@emmausimportexport.com</a><br>
-                           <a href="mailto:Abel.isayas@Emmausimportexport.com">Abel.isayas@Emmausimportexport.com</a>
+                           <a href="mailto:abel.isayas@emmausimportexport.com">abel.isayas@emmausimportexport.com</a>
                         </div>
                      </div>
                   </div>

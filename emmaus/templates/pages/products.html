@@ -8,7 +8,7 @@
 
 <main>
    <!-- breadcrumb area start -->
-   <section class="emmaus-breadcrumb p-relative z-index-1 fix" style="background-image: url('https://images.unsplash.com/photo-1507576164121-220762647800?w=1920&q=80'); background-size: cover; background-position: center;">
+   <section class="emmaus-breadcrumb p-relative z-index-1 fix" style="background-image: url('{% static 'images/banners/hands-beans.jpg' %}'); background-size: cover; background-position: center;">
       <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg, rgba(17,41,74,0.75) 0%, rgba(26,30,42,0.7) 100%);z-index:0;"></div>
       <div class="container" style="position:relative;z-index:2;">
          <div class="text-center">
@@ -24,6 +24,16 @@
    </section>
    <!-- breadcrumb area end -->
 
+   <!-- category jump bar -->
+   <nav class="emmaus-cat-bar" aria-label="Product categories">
+      <div class="container">
+         <a href="#oilseeds">Oilseeds</a>
+         <a href="#spices">Spices</a>
+         <a href="#pulses">Pulses</a>
+         <a href="#others">Others</a>
+      </div>
+   </nav>
+
    <!-- ============================================================ -->
    <!-- OILSEEDS SECTION -->
    <!-- ============================================================ -->
@@ -36,10 +46,10 @@
          </div>
          <div class="row justify-content-center">
             <!-- Humera Sesame Seed -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800">
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="800">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/humera-sesame-seed.png' %}" alt="Humera Sesame Seed">
+                     <img src="{% static 'images/products/humera-sesame-seed.jpg' %}" alt="Humera Sesame Seed" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>Humera Sesame Seed</h4>
@@ -55,10 +65,10 @@
                </div>
             </div>
             <!-- Black Cumin -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/black-cumin.png' %}" alt="Black Cumin (Nigella Sativa)">
+                     <img src="{% static 'images/products/black-cumin.jpg' %}" alt="Black Cumin (Nigella Sativa)" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>Black Cumin (Nigella Sativa)</h4>
@@ -74,10 +84,10 @@
                </div>
             </div>
             <!-- Pumpkin Seeds -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/pumpkin-seeds.jpeg' %}" alt="Pumpkin Seeds">
+                     <img src="{% static 'images/products/pumpkin-seeds.jpg' %}" alt="Pumpkin Seeds" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>Pumpkin Seeds</h4>
@@ -92,10 +102,10 @@
                </div>
             </div>
             <!-- Soya Bean -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/soya-bean.png' %}" alt="Soya Bean">
+                     <img src="{% static 'images/products/soya-bean.jpg' %}" alt="Soya Bean" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>Soya Bean</h4>
@@ -109,10 +119,10 @@
                </div>
             </div>
             <!-- Wollega Sesame Seed -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800">
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="800">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/wollega-sesame-seed.jpg' %}" alt="Wollega Sesame Seed">
+                     <img src="{% static 'images/products/wollega-sesame-seed.jpg' %}" alt="Wollega Sesame Seed" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>Wollega Sesame Seed</h4>
@@ -127,10 +137,10 @@
                </div>
             </div>
             <!-- Reddish Sesame Seed -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/reddish-sesame-seed.jpg' %}" alt="Reddish Sesame Seed">
+                     <img src="{% static 'images/products/reddish-sesame-seed.jpg' %}" alt="Reddish Sesame Seed" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>Reddish Sesame Seed</h4>
@@ -145,10 +155,10 @@
                </div>
             </div>
             <!-- Niger Seed -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/niger-seed.jpeg' %}" alt="Niger Seed">
+                     <img src="{% static 'images/products/niger-seed.jpg' %}" alt="Niger Seed" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>Niger Seed</h4>
@@ -163,10 +173,10 @@
                </div>
             </div>
             <!-- Lin Seed (Flax) -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/lin-seed-flax.jpg' %}" alt="Lin Seed (Flax)">
+                     <img src="{% static 'images/products/lin-seed-flax.jpg' %}" alt="Lin Seed (Flax)" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>Lin Seed (Flax)</h4>
@@ -181,10 +191,10 @@
                </div>
             </div>
             <!-- Rape Seed -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800">
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="800">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/rape-seed.jpg' %}" alt="Rape Seed">
+                     <img src="{% static 'images/products/rape-seed.jpg' %}" alt="Rape Seed" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>Rape Seed</h4>
@@ -199,10 +209,10 @@
                </div>
             </div>
             <!-- Safflower Seed -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/safflower-seed.jpg' %}" alt="Safflower Seed">
+                     <img src="{% static 'images/products/safflower-seed.jpg' %}" alt="Safflower Seed" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>Safflower Seed</h4>
@@ -217,10 +227,10 @@
                </div>
             </div>
             <!-- Peanut -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/peanut.jpg' %}" alt="Peanut">
+                     <img src="{% static 'images/products/peanut.jpg' %}" alt="Peanut" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>Peanut</h4>
@@ -235,10 +245,10 @@
                </div>
             </div>
             <!-- Castor Seed -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/castor-seed.jpg' %}" alt="Castor Seed">
+                     <img src="{% static 'images/products/castor-seed.jpg' %}" alt="Castor Seed" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>Castor Seed</h4>
@@ -253,10 +263,10 @@
                </div>
             </div>
             <!-- Sunflower Seed (Black) -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800">
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="800">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/sunflower-seed-black.jpg' %}" alt="Sunflower Seed (Black)">
+                     <img src="{% static 'images/products/sunflower-seed-black.jpg' %}" alt="Sunflower Seed (Black)" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>Sunflower Seed (Black)</h4>
@@ -271,10 +281,10 @@
                </div>
             </div>
             <!-- Soya Bean Meal -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/soya-bean-meal.jpg' %}" alt="Soya Bean Meal">
+                     <img src="{% static 'images/products/soya-bean-meal.jpg' %}" alt="Soya Bean Meal" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>Soya Bean Meal</h4>
@@ -304,10 +314,10 @@
          </div>
          <div class="row justify-content-center">
             <!-- Turmeric Finger -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800">
+            <div class="col-6 col-lg-4" data-aos="fade-up" data-aos-duration="800">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/turmeric-finger.png' %}" alt="Turmeric Finger">
+                     <img src="{% static 'images/products/turmeric-finger.jpg' %}" alt="Turmeric Finger" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>Turmeric Finger</h4>
@@ -323,10 +333,10 @@
                </div>
             </div>
             <!-- Coriander Seed -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+            <div class="col-6 col-lg-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/coriander-seed.png' %}" alt="Coriander Seed">
+                     <img src="{% static 'images/products/coriander-seed.jpg' %}" alt="Coriander Seed" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>Coriander Seed</h4>
@@ -342,10 +352,10 @@
                </div>
             </div>
             <!-- Fenugreek -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+            <div class="col-6 col-lg-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/fenugreek.jpg' %}" alt="Fenugreek Seeds">
+                     <img src="{% static 'images/products/fenugreek.jpg' %}" alt="Fenugreek Seeds" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>Fenugreek</h4>
@@ -373,12 +383,12 @@
             <h2 class="emmaus-section-title">Pulses</h2>
             <p class="pt-16">Ethiopia produces a wide variety of high-quality pulses. Our range includes chickpeas, kidney beans, mung beans, pinto beans, and more -- all carefully sourced and processed to meet international standards.</p>
          </div>
-         <div class="row">
+         <div class="row justify-content-center">
             <!-- White Round Pea Bean -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800">
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="800">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/white-round-pea-bean.png' %}" alt="White Round Pea Bean">
+                     <img src="{% static 'images/products/white-round-pea-bean.jpg' %}" alt="White Round Pea Bean" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>White Round Pea Bean</h4>
@@ -391,10 +401,10 @@
                </div>
             </div>
             <!-- Red Speckled Kidney Bean -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/red-speckled-kidney-bean.png' %}" alt="Red Kidney Bean">
+                     <img src="{% static 'images/products/red-speckled-kidney-bean.jpg' %}" alt="Red Kidney Bean" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>Red Kidney Bean</h4>
@@ -407,10 +417,10 @@
                </div>
             </div>
             <!-- Kabuli Chickpea -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/kabuli-chickpea.jpg' %}" alt="Kabuli Chickpea">
+                     <img src="{% static 'images/products/kabuli-chickpea.jpg' %}" alt="Kabuli Chickpea" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>Kabuli Chickpea</h4>
@@ -422,10 +432,10 @@
                </div>
             </div>
             <!-- Desi Chickpeas -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/desi-chickpeas.png' %}" alt="Desi Chickpeas">
+                     <img src="{% static 'images/products/desi-chickpeas.jpg' %}" alt="Desi Chickpeas" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>Desi Chickpeas</h4>
@@ -437,10 +447,10 @@
                </div>
             </div>
             <!-- Green Mung Bean -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/green-mung-bean.jpg' %}" alt="Green Mung Bean">
+                     <img src="{% static 'images/products/green-mung-bean.jpg' %}" alt="Green Mung Bean" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>Green Mung Bean</h4>
@@ -453,10 +463,10 @@
                </div>
             </div>
             <!-- Pinto Beans -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/pinto-beans.png' %}" alt="Pinto Beans">
+                     <img src="{% static 'images/products/pinto-beans.jpg' %}" alt="Pinto Beans" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>Pinto Beans</h4>
@@ -468,10 +478,10 @@
                </div>
             </div>
             <!-- Lupin -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/lupin.png' %}" alt="Lupin">
+                     <img src="{% static 'images/products/lupin.jpg' %}" alt="Lupin" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>Lupin</h4>
@@ -484,10 +494,10 @@
                </div>
             </div>
             <!-- Large Light Brown Kidney Beans -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800">
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="800">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/large-light-brown-kidney-beans.jpg' %}" alt="Large Light Brown Kidney Beans">
+                     <img src="{% static 'images/products/large-light-brown-kidney-beans.jpg' %}" alt="Large Light Brown Kidney Beans" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>Large Light Brown Kidney Beans</h4>
@@ -500,10 +510,10 @@
                </div>
             </div>
             <!-- Light Speckled Kidney Beans -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/light-speckled-kidney-beans.jpg' %}" alt="Light Speckled Kidney Beans">
+                     <img src="{% static 'images/products/light-speckled-kidney-beans.jpg' %}" alt="Light Speckled Kidney Beans" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>Light Speckled Kidney Beans</h4>
@@ -516,10 +526,10 @@
                </div>
             </div>
             <!-- Pigeon Peas -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                <div class="emmaus-product-card">
                   <div class="product-img">
-                     <img src="{% static 'images/products/pigeon-peas.jpg' %}" alt="Pigeon Peas">
+                     <img src="{% static 'images/products/pigeon-peas.jpg' %}" alt="Pigeon Peas" loading="lazy" width="400" height="300">
                   </div>
                   <div class="product-content">
                      <h4>Pigeon Peas</h4>
@@ -546,7 +556,7 @@
          </div>
          <div class="row justify-content-center">
             <!-- Frankincense (Etan) -->
-            <div class="col-lg-4 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="800">
+            <div class="col-6 col-lg-4 mb-30" data-aos="fade-up" data-aos-duration="800">
                <div class="emmaus-product-card">
                   <div class="product-content">
                      <h4>Frankincense (Ethiopian Etan)</h4>
@@ -562,7 +572,7 @@
                </div>
             </div>
             <!-- Myrrh -->
-            <div class="col-lg-4 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+            <div class="col-6 col-lg-4 mb-30" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                <div class="emmaus-product-card">
                   <div class="product-content">
                      <h4>Myrrh</h4>
@@ -576,7 +586,7 @@
                </div>
             </div>
             <!-- Thyme (Tosign) -->
-            <div class="col-lg-4 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+            <div class="col-6 col-lg-4 mb-30" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                <div class="emmaus-product-card">
                   <div class="product-content">
                      <h4>Thyme (Tosign)</h4>
