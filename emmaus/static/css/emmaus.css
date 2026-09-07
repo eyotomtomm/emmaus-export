@@ -730,7 +730,9 @@
         height: 48px;
     }
     header.header-area-3.stiky .header-3 {
-        padding: 16px 0;
+        /* 16px absorbs the .row's -12px gutters (otherwise the row overhangs
+           the viewport by 12px) and keeps the burger off the screen edge */
+        padding: 16px 16px;
     }
     .ca-header-action-item.d-xl-none {
         display: flex !important;
@@ -1434,5 +1436,215 @@
     header.header-area-3.stiky.scroll-header {
         position: fixed;
         background: #ffffff;
+    }
+}
+
+/* --- Page banner subtitle: make the kicker carry --------------------------- */
+.emmaus-breadcrumb p {
+    display: inline-block;
+    margin: 10px 0 0;
+    color: #ffffff;
+    font-size: clamp(14px, 1.15vw, 18px);
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+.emmaus-breadcrumb p::after {
+    content: '';
+    display: block;
+    width: 56px;
+    height: 3px;
+    margin: 12px auto 0;
+    border-radius: 2px;
+    background: #a18147;
+}
+
+/* --- Sister company cards -------------------------------------------------- */
+.emmaus-sister-card {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 18px 50px rgba(17, 41, 74, 0.10);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.emmaus-sister-card + .emmaus-sister-card {
+    margin-top: 40px;
+}
+.emmaus-sister-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 26px 64px rgba(17, 41, 74, 0.16);
+}
+.emmaus-sister-card .sister-media {
+    position: relative;
+    overflow: hidden;
+    background: #11294a;
+    min-height: 340px;
+}
+.emmaus-sister-card .sister-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+.emmaus-sister-card:hover .sister-media img {
+    transform: scale(1.04);
+}
+/* logo panel: contain the mark on the brand navy instead of cropping it */
+.emmaus-sister-card .sister-media-brand {
+    background: linear-gradient(150deg, #11294a 0%, #1a1e2a 100%);
+}
+.emmaus-sister-card .sister-media-brand::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 30%, rgba(161, 129, 71, 0.20) 0%, transparent 62%);
+    pointer-events: none;
+}
+.emmaus-sister-card .sister-media-brand img {
+    object-fit: contain;
+    padding: clamp(28px, 4vw, 56px);
+    height: auto;
+    margin: auto;
+    position: absolute;
+    inset: 0;
+}
+.emmaus-sister-card .sister-body {
+    position: relative;
+    padding: clamp(28px, 3.4vw, 52px);
+}
+.emmaus-sister-card .sister-index {
+    position: absolute;
+    top: clamp(18px, 2.4vw, 34px);
+    right: clamp(20px, 2.6vw, 40px);
+    font-size: clamp(34px, 4.4vw, 60px);
+    font-weight: 800;
+    line-height: 1;
+    color: #11294a;
+    opacity: 0.07;
+    letter-spacing: -0.02em;
+}
+.emmaus-sister-card .sister-eyebrow {
+    display: inline-block;
+    background: #f0ece3;
+    color: #a18147;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin-bottom: 14px;
+}
+.emmaus-sister-card .sister-body h3 {
+    color: #1a1e2a;
+    font-size: clamp(26px, 2.6vw, 38px);
+    font-weight: 700;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+}
+.emmaus-sister-card .sister-body h3::after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 3px;
+    margin-top: 14px;
+    border-radius: 2px;
+    background: #a18147;
+}
+.emmaus-sister-card .sister-legal {
+    margin: 14px 0 0;
+    color: #a18147;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+.emmaus-sister-card .sister-body > p {
+    color: #5a5d63;
+    font-size: 15px;
+    line-height: 1.75;
+    margin: 14px 0 0;
+}
+.emmaus-sister-card .sister-features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 24px;
+    margin: 26px 0 0;
+    padding: 22px 0 0;
+    border-top: 1px solid #eceff3;
+}
+.emmaus-sister-card .sister-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #1a1e2a;
+    font-size: 14.5px;
+    font-weight: 500;
+}
+.emmaus-sister-card .sister-features i {
+    flex: 0 0 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f0ece3;
+    color: #11294a;
+    font-size: 14px;
+}
+.emmaus-sister-card .sister-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 28px;
+    padding: 14px 28px;
+    border-radius: 50px;
+    background: #11294a;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+.emmaus-sister-card .sister-cta:hover,
+.emmaus-sister-card .sister-cta:focus-visible {
+    background: #a18147;
+    color: #ffffff;
+    transform: translateX(3px);
+}
+.emmaus-sister-card .sister-cta span,
+.emmaus-sister-card .sister-cta .cta-lead {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.16);
+    font-size: 12px;
+}
+.emmaus-sister-card .sister-cta .cta-lead {
+    order: -1;
+}
+
+@media (max-width: 991px) {
+    .emmaus-sister-card {
+        grid-template-columns: 1fr;
+    }
+    .emmaus-sister-card .sister-media {
+        min-height: 0;
+        aspect-ratio: 16 / 10;
+    }
+    .emmaus-sister-card .sister-media-brand {
+        aspect-ratio: 16 / 7;
+    }
+}
+@media (max-width: 575px) {
+    .emmaus-sister-card .sister-features {
+        grid-template-columns: 1fr;
+    }
+    .emmaus-sister-card .sister-index {
+        display: none;
     }
 }

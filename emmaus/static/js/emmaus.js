@@ -24,11 +24,11 @@
     hidePreloader();
   }
 
-  /* ---------- off-canvas menu: add IQ Fortune + aria state ---------- */
+  /* ---------- off-canvas menu: add Sister Companies + aria state ---------- */
   var offUl = document.querySelector('.ca-offcanvas-menu-3 nav > ul');
-  if (offUl && !offUl.querySelector('a[href*="iqfortune"]')) {
+  if (offUl && !offUl.querySelector('a[href*="sister-companies"]')) {
     var li = document.createElement('li');
-    li.innerHTML = '<a href="https://iqfortune.com" target="_blank" rel="noopener">IQ Fortune</a>';
+    li.innerHTML = '<a href="/sister-companies/">Sister Companies</a>';
     offUl.appendChild(li);
   }
   var toggle = document.querySelector('.ca-offcanvas-toogle');
