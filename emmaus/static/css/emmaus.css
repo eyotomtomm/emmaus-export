@@ -1648,3 +1648,22 @@
         display: none;
     }
 }
+
+/* --- Product photo pending -------------------------------------------------
+   Used where the supplied shot contradicted the card's own spec row (wrong
+   species, the plant instead of the seed, or a colour the spec denies). A
+   named placeholder is honest; a wrong photo is not. Swap back to an <img>
+   as soon as the correct photograph lands. */
+.emmaus-product-card .product-img-pending {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(circle at 50% 40%, #fffdf9 0%, rgba(255, 253, 249, 0) 60%),
+        linear-gradient(150deg, #f7f5f0 0%, #ebe4d6 100%);
+    color: #c4ad84;
+    font-size: clamp(30px, 4.5vw, 46px);
+}
+.emmaus-product-card .product-img-pending i {
+    opacity: 0.75;
+}
