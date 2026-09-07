@@ -273,3 +273,9 @@ db.sqlite3
 emmaus/static/img/
 
 .pytest_cache/
+
+# Local/production secrets. config/settings/base.py reads BASE_DIR/.env, so this
+# file holds DJANGO_SECRET_KEY and mail credentials on the server - never commit it.
+.env
+.env.*
+!.env.example
