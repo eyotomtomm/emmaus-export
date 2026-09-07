@@ -1667,3 +1667,78 @@
 .emmaus-product-card .product-img-pending i {
     opacity: 0.75;
 }
+
+/* --- Enquiry form: server-rendered status + honeypot ----------------------- */
+/* The status message is now rendered by Django, which nests the state on a
+   span inside .form-status rather than setting it on the <p> itself. */
+.form-status span.is-success,
+.form-status span.is-error {
+    display: block;
+    border-radius: 6px;
+    padding: 12px 14px;
+}
+.form-status span.is-success {
+    background: #e9f3ea;
+    color: #1e5631;
+}
+.form-status span.is-error {
+    background: #fbe9e7;
+    color: #b42318;
+}
+/* Spam honeypot: off-screen rather than display:none, since some bots skip
+   fields that are explicitly hidden. Never reachable by keyboard. */
+.emmaus-hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* --- Long-form prose pages (privacy, terms) -------------------------------- */
+.emmaus-prose {
+    color: #5a5d63;
+    font-size: 15.5px;
+    line-height: 1.8;
+}
+.emmaus-prose .prose-meta {
+    display: inline-block;
+    background: #f0ece3;
+    color: #a18147;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 28px;
+}
+.emmaus-prose h3 {
+    color: #1a1e2a;
+    font-size: 21px;
+    font-weight: 700;
+    margin: 36px 0 12px;
+}
+.emmaus-prose h3:first-of-type {
+    margin-top: 28px;
+}
+.emmaus-prose p {
+    margin-bottom: 16px;
+}
+.emmaus-prose ul {
+    margin: 0 0 16px;
+    padding-left: 20px;
+    list-style: disc;
+}
+.emmaus-prose li {
+    margin-bottom: 8px;
+    /* the theme resets list-style on li, so restate it here */
+    list-style: disc;
+}
+.emmaus-prose a {
+    color: #11294a;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+.emmaus-prose a:hover {
+    color: #a18147;
+}

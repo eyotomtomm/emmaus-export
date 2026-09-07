@@ -152,7 +152,14 @@
                      <h3 class="emmaus-section-title" style="font-size:28px;">Discuss Your Import Needs</h3>
                      <p class="pt-16">Tell us what you need and our team will get back to you with sourcing options and pricing.</p>
                   </div>
-                  <form action="mailto:abel.isayas@emmausimportexport.com" method="post" enctype="text/plain" data-emmaus-form data-subject="Import enquiry (website)">
+                  <form action="{% url 'pages:enquiry' %}" method="post" id="enquiry" data-emmaus-form novalidate>
+                     {% csrf_token %}
+                     <input type="hidden" name="next" value="imports">
+                     <input type="hidden" name="subject" value="Import enquiry">
+                     <div class="emmaus-hp" aria-hidden="true">
+                        <label for="hp-website-imports">Website</label>
+                        <input type="text" name="website" id="hp-website-imports" tabindex="-1" autocomplete="off">
+                     </div>
                      <div class="row">
                         <div class="col-md-6 mb-20 emmaus-field">
                            <label for="iq-full_name">Full name <span class="req" aria-hidden="true">*</span></label>
@@ -188,7 +195,9 @@
                            <button class="ca-btn-primary-3 theme-bg-3 text-white br-50" type="submit">Send Inquiry <span><i class="fa-solid fa-angle-right"></i></span></button>
                         </div>
                      </div>
-                     <p class="form-status" role="status" aria-live="polite"></p>
+                     <p class="form-status" role="status" aria-live="polite">
+                        {% if messages %}{% for m in messages %}<span class="{% if m.tags == 'success' %}is-success{% else %}is-error{% endif %}">{{ m }}</span>{% endfor %}{% endif %}
+                     </p>
                   </form>
                </div>
             </div>

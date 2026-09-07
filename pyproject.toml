@@ -21,6 +21,9 @@ dependencies = [
 [tool.pytest.ini_options]
 minversion = "6.0"
 addopts = "--ds=config.settings.test --reuse-db --import-mode=importlib"
+# manage.py and the WSGI entry points append emmaus/ to sys.path; pytest did
+# not, so any test touching the URLconf died on "No module named 'pages'".
+pythonpath = ["emmaus"]
 python_files = [
     "tests.py",
     "test_*.py",

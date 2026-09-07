@@ -7,7 +7,9 @@ from .base import env
 
 # GENERAL
 # ------------------------------------------------------------------------------
-DEBUG = True
+# Never True on a deployed site: the debug error page prints settings,
+# environment variables and the SECRET_KEY to any visitor who triggers a 500.
+DEBUG = False
 SECRET_KEY = env(
     "DJANGO_SECRET_KEY",
     default="emmaus-vercel-secret-change-in-production",

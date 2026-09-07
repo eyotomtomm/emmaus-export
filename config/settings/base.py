@@ -263,6 +263,14 @@ LOGGING = {
     "root": {"level": "INFO", "handlers": ["console"]},
 }
 
+# ENQUIRIES
+# ------------------------------------------------------------------------------
+# Where the website quote/enquiry form delivers. This is the cPanel mailbox.
+ENQUIRY_RECIPIENTS = env.list(
+    "DJANGO_ENQUIRY_RECIPIENTS",
+    default=["info@emmausimportexport.com"],
+)
+
 REDIS_URL = env("REDIS_URL", default="redis://localhost:6379/0")
 REDIS_SSL = REDIS_URL.startswith("rediss://")
 

@@ -1,0 +1,67 @@
+{% extends 'landing.html' %}
+
+{% load static %}
+
+{% block title %}Terms &amp; Conditions | Emmaus Import Export PLC{% endblock title %}
+
+{% block page_content %}
+
+<main>
+   <!-- breadcrumb area start -->
+   <section class="emmaus-breadcrumb p-relative z-index-1 fix" style="background-image: url('{% static 'images/banners/skyscrapers.jpg' %}'); background-size: cover; background-position: center;">
+      <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg, rgba(17,41,74,0.82) 0%, rgba(26,30,42,0.78) 100%);z-index:0;"></div>
+      <div class="container" style="position:relative;z-index:2;">
+         <div class="text-center">
+            <h2 class="ca-breadcrumb-title fnw-600" style="color:#fff;">Terms &amp; Conditions</h2>
+            <p>Using this website</p>
+            <div class="it-breadcum-link" style="margin-top:16px;">
+               <a href="{% url 'pages:dashboard' %}" style="color:rgba(255,255,255,0.8);">Home</a>
+               <span style="color:rgba(255,255,255,0.6);"><i class="fa-solid fa-angle-right"></i></span>
+               <a class="active" href="#" style="color:#fff;">Terms &amp; Conditions</a>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- breadcrumb area end -->
+
+   <section class="emmaus-section">
+      <div class="container">
+         <div class="row justify-content-center">
+            <div class="col-lg-9">
+               <div class="emmaus-prose" data-aos="fade-up" data-aos-duration="800">
+                  <p class="prose-meta">Last updated: 7 September 2026</p>
+
+                  <p>These terms apply to your use of this website, operated by Emmaus Import Export PLC, Addis Ababa, Ethiopia.</p>
+
+                  <h3>About the information on this site</h3>
+                  <p>This website is published for general information about our company and the products we trade. We take care to keep it accurate, but it is not an offer to sell and it is not a contract.</p>
+
+                  <h3>Product specifications</h3>
+                  <p>Specifications shown on the product pages &mdash; colour, purity, oil content, size and count, moisture and container stuffing &mdash; are indicative of typical export quality. Actual figures vary by harvest, region and grade. The specification that binds any shipment is the one agreed in writing in the relevant proforma invoice, sales contract or letter of credit, not the one shown here. Photographs are illustrative.</p>
+
+                  <h3>Enquiries</h3>
+                  <p>Sending an enquiry through this site does not create a contract or reserve stock. We will reply to discuss availability, pricing and terms. Please see our <a href="{% url 'pages:dynamic_pages' template_name='privacy' %}">Privacy Policy</a> for how we handle the details you send.</p>
+
+                  <h3>Availability</h3>
+                  <p>We aim to keep this site available and current, but we do not guarantee uninterrupted access, and we may change or remove content at any time without notice.</p>
+
+                  <h3>Intellectual property</h3>
+                  <p>The Emmaus Import Export PLC name, logo, and the text and images on this site belong to us or are used with permission. Please do not reproduce them for commercial purposes without our written consent.</p>
+
+                  <h3>Links to other sites</h3>
+                  <p>Where we link to a sister company or another organisation, we are not responsible for the content of that site.</p>
+
+                  <h3>Governing law</h3>
+                  <p>These terms are governed by the laws of the Federal Democratic Republic of Ethiopia.</p>
+
+                  <h3>Contact</h3>
+                  <p>Questions about these terms: <a href="mailto:info@emmausimportexport.com">info@emmausimportexport.com</a> or <a href="tel:+251911192862">+251 91 1192862</a>.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+</main>
+
+{% endblock page_content %}

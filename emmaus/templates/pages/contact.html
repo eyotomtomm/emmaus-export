@@ -44,7 +44,6 @@
                   <div class="value-icon"><i class="fa-solid fa-envelope"></i></div>
                   <h4>Email Us</h4>
                   <p><a href="mailto:info@emmausimportexport.com" style="color:#5a5d63;font-size:13px;">info@emmausimportexport.com</a></p>
-                  <p><a href="mailto:abel.isayas@emmausimportexport.com" style="color:#5a5d63;font-size:13px;">abel.isayas@emmausimportexport.com</a></p>
                </div>
             </div>
             <div class="col-xl-3 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="1400">
@@ -76,7 +75,14 @@
                      <h3 class="emmaus-section-title" style="font-size:28px;">Send Us a Message</h3>
                      <p class="pt-16 pb-24">Looking for a reliable supplier of Ethiopian agricultural products? Contact Emmaus Import Export PLC today for product specifications, pricing, packaging options, and shipment details. Our team is ready to help you source premium Ethiopian products with confidence.</p>
                   </div>
-                  <form action="mailto:abel.isayas@emmausimportexport.com" method="post" enctype="text/plain" data-emmaus-form data-subject="Quote request (website)">
+                  <form action="{% url 'pages:enquiry' %}" method="post" id="enquiry" data-emmaus-form novalidate>
+                     {% csrf_token %}
+                     <input type="hidden" name="next" value="contact">
+                     <input type="hidden" name="subject" value="Quote request">
+                     <div class="emmaus-hp" aria-hidden="true">
+                        <label for="hp-website-contact">Website</label>
+                        <input type="text" name="website" id="hp-website-contact" tabindex="-1" autocomplete="off">
+                     </div>
                      <div class="row">
                         <div class="col-md-6 mb-20 emmaus-field">
                            <label for="cq-full_name">Full name <span class="req" aria-hidden="true">*</span></label>
@@ -97,15 +103,15 @@
                         <div class="col-md-12 mb-20 emmaus-field">
                            <label for="cq-product_interest">Product interest</label>
                            <select class="nice-select wide ca-select" id="cq-product_interest" name="product_interest">
-                              <option data-display="Product Interest">Select Product Category</option>
-                              <option value="1">Oilseeds (Sesame, Black Cumin, Niger Seeds, Linseed)</option>
-                              <option value="2">Spices (Turmeric, Ginger, Coriander, Cumin, etc.)</option>
-                              <option value="3">Pulses (Chickpeas, Beans, Mung Beans, etc.)</option>
-                              <option value="4">Import - Vehicles</option>
-                              <option value="5">Import - Chemicals</option>
-                              <option value="6">Import - Machinery</option>
-                              <option value="7">Import - Electronics</option>
-                              <option value="8">Other</option>
+                              <option value="" data-display="Product Interest">Select Product Category</option>
+                              <option value="Oilseeds">Oilseeds (Sesame, Black Cumin, Niger Seeds, Linseed)</option>
+                              <option value="Spices">Spices (Turmeric, Coriander, Fenugreek, etc.)</option>
+                              <option value="Pulses">Pulses (Chickpeas, Beans, Mung Beans, etc.)</option>
+                              <option value="Import - Vehicles">Import - Vehicles</option>
+                              <option value="Import - Chemicals">Import - Chemicals</option>
+                              <option value="Import - Machinery">Import - Machinery</option>
+                              <option value="Import - Electronics">Import - Electronics</option>
+                              <option value="Other">Other</option>
                            </select>
                         </div>
                         <div class="col-md-12 mb-20 emmaus-field">
@@ -117,7 +123,9 @@
                               Send Message <span><i class="fa-solid fa-angle-right"></i></span></button>
                         </div>
                      </div>
-                     <p class="form-status" role="status" aria-live="polite"></p>
+                     <p class="form-status" role="status" aria-live="polite">
+                        {% if messages %}{% for m in messages %}<span class="{% if m.tags == 'success' %}is-success{% else %}is-error{% endif %}">{{ m }}</span>{% endfor %}{% endif %}
+                     </p>
                   </form>
                </div>
             </div>
@@ -140,8 +148,7 @@
                   <div class="d-flex mb-20">
                      <div style="min-width:40px;"><i class="fa-solid fa-envelope" style="font-size:18px;"></i></div>
                      <div>
-                        <a href="mailto:info@emmausimportexport.com" style="color:rgba(255,255,255,0.9);">info@emmausimportexport.com</a><br>
-                        <a href="mailto:abel.isayas@emmausimportexport.com" style="color:rgba(255,255,255,0.9);">abel.isayas@emmausimportexport.com</a>
+                        <a href="mailto:info@emmausimportexport.com" style="color:rgba(255,255,255,0.9);">info@emmausimportexport.com</a>
                      </div>
                   </div>
                   <div class="d-flex mb-20">

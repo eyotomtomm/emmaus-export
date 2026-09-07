@@ -2,7 +2,7 @@
    - preloader: hide on DOMContentLoaded (don't wait for every image)
    - stats counters: count once when visible, no plugin
    - anchors: land below the fixed header, also after the preloader
-   - forms: send every field through the mailto action + confirmation
+   - forms: client-side validation feedback; submission is handled server-side
 */
 (function () {
   'use strict';
@@ -82,46 +82,27 @@
     }
   }
 
-  /* ---------- forms ---------- */
+  /* ---------- enquiry forms ----------
+     The form now POSTs to Django and is emailed server-side. This only adds
+     client-side validation feedback before letting the submit through; it used
+     to build a mailto: link instead, which silently lost every enquiry from a
+     phone or webmail visitor. */
   var forms = document.querySelectorAll('form[data-emmaus-form]');
   forms.forEach(function (form) {
-    form.setAttribute('novalidate', 'novalidate');
     form.addEventListener('submit', function (e) {
-      e.preventDefault();
       var status = form.querySelector('.form-status');
       if (!form.checkValidity()) {
+        e.preventDefault();
         form.classList.add('was-validated');
         var first = form.querySelector(':invalid');
         if (first) first.focus();
         if (status) {
-          status.textContent = 'Please fill in the highlighted fields.';
-          status.className = 'form-status is-error';
+          status.innerHTML = '<span class="is-error">Please fill in the highlighted fields.</span>';
         }
         return;
       }
-      var mailto = form.getAttribute('action') || '';
-      var lines = [];
-      var fields = form.querySelectorAll('input, select, textarea');
-      fields.forEach(function (f) {
-        if (!f.name || f.type === 'submit') return;
-        var label = form.querySelector('label[for="' + f.id + '"]');
-        var name = label ? label.textContent.trim() : f.name;
-        var value = f.value;
-        if (f.tagName === 'SELECT') {
-          var opt = f.options[f.selectedIndex];
-          value = opt ? opt.textContent.trim() : '';
-        }
-        lines.push(name + ': ' + value);
-      });
-      var subject = form.getAttribute('data-subject') || 'Website enquiry';
-      var href = mailto + (mailto.indexOf('?') === -1 ? '?' : '&') +
-        'subject=' + encodeURIComponent(subject) +
-        '&body=' + encodeURIComponent(lines.join('\n'));
-      window.location.href = href;
-      if (status) {
-        status.textContent = 'Thanks — your email app should open with the details filled in. If it does not, write to ' + mailto.replace('mailto:', '') + '.';
-        status.className = 'form-status is-success';
-      }
+      var btn = form.querySelector('[type="submit"]');
+      if (btn) { btn.disabled = true; }
     });
   });
 })();
