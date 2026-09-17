@@ -59,11 +59,10 @@ STORAGES = {
 # SECURITY
 # ------------------------------------------------------------------------------
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
-# Deliberately defaults to False. The domain currently has only a self-signed
-# certificate; forcing the HTTPS redirect before AutoSSL has issued a real one
-# would push every visitor into a browser security warning. Flip this to True
-# (and raise HSTS) once the certificate shows as valid in cPanel.
-SECURE_SSL_REDIRECT = env.bool("DJANGO_SECURE_SSL_REDIRECT", default=False)
+# Defaults to True: AutoSSL has issued a valid certificate for the domain
+# (cPanel shows SSL Certificate: Active), so every visitor can be pushed to
+# HTTPS. Set DJANGO_SECURE_SSL_REDIRECT=False only if the cert ever lapses.
+SECURE_SSL_REDIRECT = env.bool("DJANGO_SECURE_SSL_REDIRECT", default=True)
 SESSION_COOKIE_SECURE = SECURE_SSL_REDIRECT
 CSRF_COOKIE_SECURE = SECURE_SSL_REDIRECT
 SECURE_HSTS_SECONDS = env.int("DJANGO_SECURE_HSTS_SECONDS", default=0)

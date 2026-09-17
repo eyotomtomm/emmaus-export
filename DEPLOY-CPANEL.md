@@ -14,6 +14,23 @@ cPanel, look under **Software** for **Setup Python App**.
   keep the site on Vercel and just point DNS there. Uploading these files
   without it will not make the site run.
 
+## This account
+
+From the cPanel dashboard:
+
+| | |
+|---|---|
+| cPanel user | `emmausud` |
+| Home directory | `/home/emmausud` |
+| Primary domain | `emmausimportexport.com` |
+| Shared IP | `37.26.105.26` |
+| SSL | Active |
+| Databases | 0 used (SQLite means none needed) |
+| Disk / bandwidth | unlimited; memory capped at 2 GB, 100 processes |
+
+So the application root below is `/home/emmausud/emmaus-export`, and the app
+URL is the primary domain.
+
 ## Steps
 
 1. **Setup Python App** → Create Application
@@ -58,22 +75,19 @@ cPanel, look under **Software** for **Setup Python App**.
 6. **Restart** the app from the Python App UI after every deploy — Passenger
    caches the loaded application.
 
-## Turn on HTTPS first
+## HTTPS
 
-The domain currently shows a **self-signed certificate**, which browsers reject
-with a full-page warning. In cPanel go to **Security → SSL/TLS Status**, select
-the domain, and **Run AutoSSL** to get a free Let's Encrypt certificate.
-
-Only once that shows as valid, set in `.env` and restart:
+The certificate is already valid — cPanel shows **SSL Certificate: Active** for
+`emmausimportexport.com`. So `.env` ships with:
 
 ```
 DJANGO_SECURE_SSL_REDIRECT=True
 DJANGO_SECURE_HSTS_SECONDS=60
 ```
 
-Raise `DJANGO_SECURE_HSTS_SECONDS` to `518400` after confirming nothing broke.
-It is left off by default deliberately: forcing the HTTPS redirect while the
-certificate is still self-signed makes the site unreachable for real visitors.
+Raise `DJANGO_SECURE_HSTS_SECONDS` to `518400` after a day of confirming nothing
+broke. If the cert ever lapses, set `DJANGO_SECURE_SSL_REDIRECT=False` and
+restart — otherwise every visitor lands on a browser warning.
 
 ## Notes
 
