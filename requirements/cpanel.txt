@@ -16,5 +16,10 @@ django==5.0.13
 django-environ==0.12.0
 django-model-utils==5.0.0
 django-allauth[mfa]==65.4.1
+# fido2 2.x dropped features.webauthn_json_mapping, which allauth 65.4.1 still
+# sets at import time - allauth's own floor (>=1.1.2) lets it in and every
+# request dies with AttributeError. requirements.txt already pinned it; these
+# files had not.
+fido2>=1.1,<2.0
 django-crispy-forms==2.3
 crispy-bootstrap5==2024.10
