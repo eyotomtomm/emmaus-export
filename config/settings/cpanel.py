@@ -96,7 +96,10 @@ SERVER_EMAIL = env("DJANGO_SERVER_EMAIL", default=DEFAULT_FROM_EMAIL)
 
 # LOGGING
 # ------------------------------------------------------------------------------
-# Passenger discards stdout, so log to a file inside the app instead.
+# Passenger discards stdout, so log to a file inside the app instead. logs/ is
+# gitignored, so a fresh deploy has no such directory and the handler would
+# raise at import - create it here rather than making it a manual deploy step.
+(BASE_DIR / "logs").mkdir(exist_ok=True)
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
